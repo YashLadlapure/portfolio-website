@@ -1,4 +1,4 @@
-// Download resume as PDF (if you have a download button)
+// Download resume as PDF
 const pdfBtn = document.getElementById('downloadPdf');
 if (pdfBtn) {
     pdfBtn.addEventListener('click', function() {
@@ -6,7 +6,7 @@ if (pdfBtn) {
     });
 }
 
-// Show full profile in alert (optional)
+// Show full profile in alert
 const infoBtn = document.getElementById('infoBtn');
 if (infoBtn) {
     infoBtn.addEventListener('click', function() {
@@ -14,7 +14,7 @@ if (infoBtn) {
     });
 }
 
-// Animate skills/progress bars (if using skill bars)
+// Animate skills/progress bars
 document.querySelectorAll('.skill-bar').forEach(function(bar){
     const value = bar.getAttribute('data-value');
     bar.style.width = value;

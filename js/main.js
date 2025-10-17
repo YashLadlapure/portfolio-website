@@ -15,7 +15,7 @@ if (darkBtn) {
     });
 }
 
-// Smooth scroll for internal links (if using <a href="#section">)
+// Smooth scroll for internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const target = document.querySelector(this.getAttribute('href'));

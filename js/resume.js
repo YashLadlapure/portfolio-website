@@ -1,21 +1,22 @@
-// Download resume as PDF
-const pdfBtn = document.getElementById('downloadPdf');
-if (pdfBtn) {
-    pdfBtn.addEventListener('click', function() {
-        window.print();
-    });
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check local storage for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+    }
 
-// Show full profile in alert
-const infoBtn = document.getElementById('infoBtn');
-if (infoBtn) {
-    infoBtn.addEventListener('click', function() {
-        alert("I'm Yash Santosh Ladlapure, 3rd year BTech Computer Science student (MIT WPU Pune), skilled in C, C++, Python, SQL, HTML, CSS, Git, and more. Projects: Football Player System, InternSetu (SIH prototype, Team Sspark), active coder and system design enthusiast. Contact: yash.ladlapure@gmail.com | GitHub/YashLadlapure");
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        // Save preference to local storage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
     });
-}
-
-// Animate skills/progress bars
-document.querySelectorAll('.skill-bar').forEach(function(bar){
-    const value = bar.getAttribute('data-value');
-    bar.style.width = value;
 });

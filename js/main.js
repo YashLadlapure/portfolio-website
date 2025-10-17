@@ -1,27 +1,28 @@
-// Navigation: Highlight active section
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        navLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-    });
-});
+// main.js
 
-// Dark mode toggle
-const darkBtn = document.getElementById('toggleDark');
-if (darkBtn) {
-    darkBtn.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-    });
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
+    // Toggle mobile navigation menu
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Close mobile menu when a link is clicked (for smooth scrolling)
+    const navAnchors = navLinks.querySelectorAll('a');
+    navAnchors.forEach(anchor => {
+        anchor.addEventListener('click', () => {
+            // Check if the menu is open (on mobile)
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
     });
+
+    // Optional: Highlight active section in navbar (more complex, but good practice)
+    // For simplicity, this is often done with an Intersection Observer, but for this basic setup,
+    // we'll just handle the mobile menu toggle.
 });

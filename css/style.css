@@ -37,7 +37,7 @@ body {
     --card-bg: #374151; /* Card background, slightly different from main bg */
     --shadow-color: rgba(0, 0, 0, 0.4);
     --header-bg-opacity: rgba(31, 41, 55, 0.9); /* Opaque header */
-
+}
     body.light-mode {
     --bg-primary: #f9fafb;
     --bg-secondary: #ffffff;

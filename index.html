@@ -2,150 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yash Ladlapure - Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="/logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app">
-    <header class="header">
-      <nav class="container nav-content">
-        <a class="logo" href="#home">Yash Ladlapure</a>
-        <div class="nav-links">
-          <a href="#about" class="nav-link">About</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#contact" class="nav-link">Contact</a>
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                 fill="none" stroke="currentColor" stroke-width="1.5"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"></path>
-            </svg>
-          </button>
+  <header class="header">
+    <nav>
+      <span class="logo">Yash Ladlapure</span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <div class="header-divider"></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Yash Santosh Ladlapure</h1>
+        <p class="hero-title">3rd Year B.Tech CSE Student, MIT WPU</p>
+        <div class="contact-links">
+          <span>📧 <a href="mailto:yash.ladlapure@gmail.com">yash.ladlapure@gmail.com</a></span>
+          <span>📱 +91-81800 33454</span>
         </div>
-        <button class="menu-toggle-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-               fill="none" stroke="currentColor" stroke-width="1.5"
-               stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
-            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-          </svg>
-        </button>
-      </nav>
-      <div class="header-divider"></div>
-    </header>
-
-    <section id="home" class="hero-section">
-      <div class="container hero-content">
-        <p class="hero-greeting">Hi, I'm Yash 👋</p>
-        <h1 class="hero-title">Web & Cloud Developer</h1>
-        <a href="#contact" class="btn-primary">CONNECT WITH ME</a>
         <div class="social-icons">
           <a href="https://github.com/YashLadlapure" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/yash-ladlapure" target="_blank">LinkedIn</a>
+          <a href="https://linkedin.com/in/yashladlapure" target="_blank">LinkedIn</a>
         </div>
-      </div>
-
-      <div class="fixed-social-desktop">
-        <a href="https://github.com/YashLadlapure" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/yash-ladlapure" target="_blank">LinkedIn</a>
-        <div class="vertical-line"></div>
+        <a class="btn-primary" href="#contact">CONNECT WITH ME</a>
       </div>
     </section>
 
-    <section id="about" class="about-section">
-      <div class="container about-content">
-        <div class="about-card">
-          <div class="about-details">
-            <h2 class="section-title">About Me</h2>
-            <div class="divider-line"></div>
-            <h3 class="about-name">Yash Santosh Ladlapure</h3>
-            <p class="about-bio">
-              Hi, I'm Yash — a Computer Science Engineering student at MIT WPU, Pune (2023–2027).
-              I’m passionate about full-stack web development, cloud computing, and iOS app development.
-              I build scalable websites using the MERN stack and love exploring DevOps and cloud tools.
-              My goal is to keep learning, build impactful projects, and grow as a software engineer.
-            </p>
-            <a href="your_resume_link.pdf" target="_blank" rel="noopener noreferrer" class="link-resume">
-              Download Resume
-              <svg fill="none" stroke="currentColor" stroke-linecap="round"
-                   stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2"
-                   viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-            </a>
-          </div>
-        </div>
+    <section id="about" class="section-card">
+      <h2>Objective</h2>
+      <p>
+        Motivated and curious third-year Computer Science student at MIT World Peace University, Pune.
+        Strong foundation in programming and databases; eager to apply and expand skills through internships,
+        real-world projects, and team collaboration.
+      </p>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>MIT World Peace University, Pune</strong></li>
+        <li>B.Tech in Computer Science (2022 – Present)</li>
+        <li>CGPA: <span style="color:#4054b2; font-weight:500">[Add your CGPA here]</span></li>
+        <li>Relevant Coursework: Data Structures, OOP in C++, DBMS, OS</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="section-card">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><span>C</span></div>
+        <div class="skill-card"><span>C++</span></div>
+        <div class="skill-card"><span>Python</span></div>
+        <div class="skill-card"><span>SQL</span></div>
+        <div class="skill-card"><span>PL/SQL</span></div>
+        <div class="skill-card"><span>HTML</span></div>
+        <div class="skill-card"><span>Git</span></div>
+        <div class="skill-card"><span>MySQL</span></div>
+        <div class="skill-card"><span>VS Code</span></div>
+        <div class="skill-card"><span>Oracle SQL</span></div>
+        <div class="skill-card"><span>OOP</span></div>
+        <div class="skill-card"><span>DBMS</span></div>
+        <div class="skill-card"><span>Algorithms</span></div>
       </div>
     </section>
 
-    <section id="skills" class="skills-section">
-      <div class="container">
-        <h2 class="section-title">Skills.</h2>
-        <div class="skills-grid">
-          <div class="skill-card"><img src="html.svg" alt="HTML"><h4>HTML</h4></div>
-          <div class="skill-card"><img src="css.svg" alt="CSS"><h4>CSS</h4></div>
-          <div class="skill-card"><img src="javascript.svg" alt="JavaScript"><h4>JavaScript</h4></div>
-          <div class="skill-card"><img src="react.svg" alt="ReactJS"><h4>ReactJS</h4></div>
-          <div class="skill-card"><img src="nodejs.svg" alt="Node.js"><h4>Node.js</h4></div>
-          <div class="skill-card"><img src="mongodb.svg" alt="MongoDB"><h4>MongoDB</h4></div>
-          <div class="skill-card"><img src="flutter.svg" alt="Flutter"><h4>Flutter (Learning)</h4></div>
-          <div class="skill-card"><img src="aws.svg" alt="AWS"><h4>AWS Cloud</h4></div>
+    <section id="projects" class="section-card">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Global Football Player Transaction Management System</h3>
+          <p>Track and manage football player transfers between clubs. Displays transfer history, analytics, and wage leaderboard for top/least earning players.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-      <div class="container">
-        <h2 class="section-title">Projects.</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-image-placeholder"></div>
-            <div class="project-details">
-              <h4>Farmer-Vendor Marketplace</h4>
-              <p class="project-desc">
-                A Smart India Hackathon project connecting farmers directly with urban vendors
-                for fair pricing and efficient logistics.
-              </p>
-              <p class="project-stack">MERN Stack - Firebase</p>
-              <a href="#" target="_blank" class="btn-secondary">VIEW SITE</a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image-placeholder"></div>
-            <div class="project-details">
-              <h4>Portfolio Website</h4>
-              <p class="project-desc">
-                A personal developer portfolio showcasing my projects, GitHub activity, and professional details.
-              </p>
-              <p class="project-stack">HTML - CSS - JavaScript</p>
-              <a href="https://github.com/YashLadlapure" target="_blank" class="btn-secondary">VIEW CODE</a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image-placeholder"></div>
-            <div class="project-details">
-              <h4>Cloud Deployment Demo</h4>
-              <p class="project-desc">
-                A project demonstrating deployment of a full-stack app on AWS using Docker and CI/CD.
-              </p>
-              <p class="project-stack">AWS - Docker - Node.js</p>
-              <span class="btn-secondary disabled">COMING SOON</span>
-            </div>
-          </div>
+        <div class="project-card">
+          <h3>Career Link/InternSetu (SIH 2025 Prototype)</h3>
+          <p>Unified campus internship platform with AI-matched internships, instant certificates, and automated approvals/interviews.<br>Status: Waiting List for Round 3. Led team for prototype, dashboard, recruiter, and mentor modules.</p>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p>Reach out via <a href="mailto:yashladlapure@gmail.com">email</a> or connect on social media.</p>
-        <p class="contact-prompt">Let’s collaborate on something amazing!</p>
+    <section id="achievements" class="section-card">
+      <h2>Achievements & Interests</h2>
+      <ul>
+        <li>Participated in coding contests (HackerRank, CodeChef)</li>
+        <li>SIH 2025 Participant (Team Sspark, Prototype Developed)</li>
+        <li>Passionate about system design, building tech applications, and exploring new trends</li>
+      </ul>
+    </section>
+    <section id="contact" class="section-card">
+      <h2>Contact</h2>
+      <p>Want to collaborate or connect? Reach out by email, phone, or on social media:</p>
+      <div class="contact-links">
+        <span>📧 <a href="mailto:yash.ladlapure@gmail.com">yash.ladlapure@gmail.com</a></span>
+        <span>📱 +91-81800 33454</span>
+      </div>
+      <div class="social-icons">
+        <a href="https://github.com/YashLadlapure">GitHub</a>
+        <a href="https://linkedin.com/in/yashladlapure">LinkedIn</a>
       </div>
     </section>
-  </div>
-
-  <script src="js/resume.js"></script>
+  </main>
 </body>
 </html>

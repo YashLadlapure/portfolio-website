@@ -28,10 +28,10 @@ body {
 
 /* Default (Dark Mode from screenshot) */
 :root {
-    --bg-primary: #1f2937; /* Dark Slate Blue-ish */
+    --bg-primary: #ffffff; /* Dark Slate Blue-ish */
     --bg-secondary: #1f2937; /* Same as primary for consistent background */
     --text-primary: #e5e7eb; /* Off-white for main text */
-    --text-secondary: #9ca3af; /* Lighter gray for subtle text */
+    --text-secondary: #ffffff; /* Lighter gray for subtle text */
     --accent-color: #6366f1; /* Purple-ish blue for highlights (like underline, links) */
     --border-color: #374151; /* Darker gray for subtle borders/shadows */
     --card-bg: #374151; /* Card background, slightly different from main bg */

@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 // resume.js
 // Basic dark mode toggle (optional)
 const darkToggle = document.getElementById('theme-toggle');
@@ -10,6 +11,8 @@ if (darkToggle) {
 
 // Add in your own enhancements—animations, etc—as needed!
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', () => {
     // Get the theme toggle button and the body element
@@ -60,4 +63,7 @@ if (darkToggle) {
 
 // Add in your own enhancements—animations, etc—as needed!
 >>>>>>> ad02d0900d504d2fde2a7318fd2b562fe4bd83d0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 :root {
   --primary: #4054b2;
   --bg: #f5f6fa;
@@ -7,6 +8,8 @@
   --section-radius: 16px;
 }
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 /* ----------------------------------- */
 /* 1. Global Reset & Utilities */
@@ -71,12 +74,16 @@ body.light-mode { /* Renamed for clarity, was 'dark-mode' originally */
   --section-radius: 16px;
 }
 >>>>>>> ad02d0900d504d2fde2a7318fd2b562fe4bd83d0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 body {
   font-family: 'Poppins', Arial, sans-serif;
   background: var(--bg);
   margin: 0; color: var(--text);
 }
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 .header {
   background: var(--card-bg);
@@ -149,6 +156,8 @@ main { max-width: 900px; margin: auto; }
   box-shadow: 0 1px 8px rgba(64,84,178,0.04);
 }
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 
 /* ----------------------------------- */
@@ -700,6 +709,9 @@ main { max-width: 900px; margin: auto; }
   padding: 1rem 1.3rem;
   box-shadow: 0 1px 8px rgba(64,84,178,0.04);
 }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 .project-card h3 { margin: 0.4em 0; font-size: 1.1rem; }
 @media (max-width: 600px) {
@@ -708,6 +720,10 @@ main { max-width: 900px; margin: auto; }
   .skills-grid, .projects-grid { grid-template-columns: 1fr; }
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> ad02d0900d504d2fde2a7318fd2b562fe4bd83d0
+>>>>>>> Stashed changes
 =======
 >>>>>>> ad02d0900d504d2fde2a7318fd2b562fe4bd83d0
 >>>>>>> Stashed changes

@@ -28,27 +28,25 @@ body {
 
 /* Default (Dark Mode from screenshot) */
 :root {
-    --bg-primary: #ffffff; /* Dark Slate Blue-ish */
+    --bg-primary: #1f2937; /* Dark Slate Blue-ish */
     --bg-secondary: #1f2937; /* Same as primary for consistent background */
     --text-primary: #e5e7eb; /* Off-white for main text */
-    --text-secondary: #ffffff; /* Lighter gray for subtle text */
+    --text-secondary: #9ca3af; /* Lighter gray for subtle text */
     --accent-color: #6366f1; /* Purple-ish blue for highlights (like underline, links) */
     --border-color: #374151; /* Darker gray for subtle borders/shadows */
     --card-bg: #374151; /* Card background, slightly different from main bg */
     --shadow-color: rgba(0, 0, 0, 0.4);
     --header-bg-opacity: rgba(31, 41, 55, 0.9); /* Opaque header */
-}
 
-/* Light Mode (Reversible, but screenshot is dark) */
-body.light-mode { /* Renamed for clarity, was 'dark-mode' originally */
-    --bg-primary: #f9fafb; /* Very light gray */
-    --bg-secondary: #ffffff; /* White */
-    --text-primary: #111827; /* Dark gray */
-    --text-secondary: #6b7280; /* Medium gray */
-    --accent-color: #4f46e5; /* Indigo */
-    --border-color: #d1d5db; /* Light gray border */
-    --card-bg: #e5e7eb; /* Lighter card bg */
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    body.light-mode {
+    --bg-primary: #f9fafb;
+    --bg-secondary: #ffffff;
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --accent-color: #4f46e5;
+    --border-color: #d1d5db;
+    --card-bg: #f9fafb; /* CHANGE THIS to match --bg-primary or another lighter color */
+    --shadow-color: rgba(0, 0, 0, 0.15);
     --header-bg-opacity: rgba(249, 250, 251, 0.9);
 }
 

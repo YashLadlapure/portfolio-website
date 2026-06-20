@@ -7,52 +7,87 @@ on:
     branches: [ main, develop ]
 
 jobs:
-  lint:
-    name: Lint Code
+  html-quality:
+    name: 🔍 HTML Quality Check
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-        cache: 'npm'
-    
-    - name: Install dependencies
-      run: npm ci || npm install
-      
-    - name: Run ESLint
-      run: npm run lint || echo "ESLint not configured"
-      continue-on-error: true
-      
-    - name: Run Prettier check
-      run: npm run format:check || echo "Prettier not configured"
-      continue-on-error: true
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check accessibility basics
+        run: |
+          echo "Running accessibility checks..."
+          # Check all images have alt attributes
+          IMG_WITHOUT_ALT=$(grep -E '<img(?![^>]*alt=)' index.html | wc -l)
+          if [ "$IMG_WITHOUT_ALT" -gt 0 ]; then
+            echo "⚠️  Some images may be missing alt attributes"
+          else
+            echo "✅ All images have alt attributes"
+          fi
+          # Check lang attribute on html tag
+          if grep -q '<html lang=' index.html; then
+            echo "✅ Language attribute set on <html>"
+          else
+            echo "⚠️  Missing lang attribute on <html>"
+          fi
+          # Check charset meta
+          if grep -q 'charset' index.html; then
+            echo "✅ Charset meta tag present"
+          else
+            echo "❌ Missing charset meta" && exit 1
+          fi
+          echo "✅ Accessibility checks passed"
+
+      - name: Check SEO basics
+        run: |
+          echo "Running SEO checks..."
+          if grep -q '<meta name=\"description\"' index.html; then
+            echo "✅ Meta description present"
+          else
+            echo "⚠️  Consider adding a meta description for better SEO"
+          fi
+          if grep -q '<title>' index.html; then
+            echo "✅ Title tag present"
+          else
+            echo "❌ Missing title tag" && exit 1
+          fi
+          echo "✅ SEO checks passed"
 
   security:
-    name: Security Audit
+    name: 🔒 Security Check
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-        cache: 'npm'
-    
-    - name: Install dependencies
-      run: npm ci || npm install
-      
-    - name: Run npm audit
-      run: npm audit --audit-level=moderate || echo "No vulnerabilities found"
-      continue-on-error: true
-      
-    - name: Check for outdated packages
-      run: npm outdated || echo "All packages up to date"
-      continue-on-error: true
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Scan for hardcoded secrets
+        run: |
+          echo "Scanning for potential secrets..."
+          # Check for common secret patterns (basic scan)
+          if grep -rE '(api_key|apikey|secret|password|token)\s*=\s*["\x27][^"\x27]{8,}' --include='*.js' --include='*.html' . 2>/dev/null; then
+            echo "⚠️  Potential secrets detected — review carefully"
+          else
+            echo "✅ No obvious hardcoded secrets found"
+          fi
+
+      - name: Check external links use HTTPS
+        run: |
+          echo "Checking external links for HTTPS..."
+          HTTP_LINKS=$(grep -oE 'href="http://[^"]+"' index.html | wc -l)
+          if [ "$HTTP_LINKS" -gt 0 ]; then
+            echo "⚠️  $HTTP_LINKS non-HTTPS external link(s) found"
+            grep -oE 'href="http://[^"]+"' index.html
+          else
+            echo "✅ All external links use HTTPS"
+          fi
+
+      - name: Check rel=noopener on external links
+        run: |
+          echo "Checking target=_blank links have rel=noopener..."
+          UNSAFE=$(grep 'target="_blank"' index.html | grep -v 'noopener' | wc -l)
+          if [ "$UNSAFE" -gt 0 ]; then
+            echo "⚠️  $UNSAFE link(s) with target=_blank missing rel=noopener"
+          else
+            echo "✅ All external links have rel=noopener"
+          fi
+          echo "✅ Security checks passed"

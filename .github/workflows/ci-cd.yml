@@ -28,7 +28,7 @@ jobs:
           else
             echo "❌ Missing HTML5 doctype" && exit 1
           fi
-          if grep -q '<meta name=\"viewport\"' index.html; then
+          if grep -q '<meta name="viewport"' index.html; then
             echo "✅ Viewport meta tag present (mobile-friendly)"
           else
             echo "⚠️  Viewport meta tag missing"
@@ -43,7 +43,6 @@ jobs:
       - name: Check for broken internal links
         run: |
           echo "Scanning for common broken patterns..."
-          # Check no empty href or src attributes
           if grep -E 'href=""' index.html; then
             echo "⚠️  Empty href found"
           else
@@ -65,7 +64,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./

@@ -71,7 +71,7 @@
                             <h3 class="about-name">YASH SANTOSH LADLAPURE</h3>
                             <span class="open-badge">&#128994; Open to Internship</span>
                             <p class="about-bio">
-                                I’m a B.Tech Computer Science student at MIT-WPU who likes building real products, not just class assignments. Most of my time goes into full‑stack web apps with React, Node.js, and TypeScript, plus a bit of Gemini and cloud when it makes sense.
+                                I'm a B.Tech Computer Science student at MIT-WPU who likes building real products, not just class assignments. Most of my time goes into full‑stack web apps with React, Node.js, and TypeScript, plus a bit of Gemini and cloud when it makes sense.
                             </p>
                             <p class="about-education">
                                 Education: B.Tech in Computer Science &amp; Engineering, MIT World Peace University, Pune (2023–2027). Coursework that actually shows up in my projects: Data Structures &amp; Algorithms, Operating Systems, Computer Networks, Database Management Systems, Object Oriented Programming, Artificial Intelligence, Software Engineering, Cloud Computing.
@@ -115,7 +115,7 @@
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-image-wrapper"> 
-                            <img src="Gemini_Generated_Image_4ruuom4ruuom4ruu.png" alt="Research Copilot Dashboard" class="project-image">
+                            <img src="Gemini_Generated_Image_4ruuom4ruuom4ruu.png" alt="Research Copilot Dashboard" class="project-image" loading="lazy">
                         </div>
                         <div class="project-details">
                             <h4>Research Copilot — AI Publication Compliance Assistant</h4>
@@ -128,7 +128,7 @@
 
                     <div class="project-card">
                         <div class="project-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="Meme Vault Project" class="project-image">
+                            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="Meme Vault Project" class="project-image" loading="lazy">
                         </div>
                         <div class="project-details">
                             <h4>Meme Vault — Full‑Stack Meme Sharing Platform</h4>
@@ -141,7 +141,14 @@
 
                     <div class="project-card">
                         <div class="project-image-wrapper">
-                            <img src="wp2859292.jpg" alt="InternSetu Hackathon Project" class="project-image">
+                            <img
+                              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+                              alt="InternSetu — students collaborating on a hackathon project"
+                              class="project-image"
+                              loading="lazy"
+                              width="1200"
+                              height="675"
+                            >
                         </div>
                         <div class="project-details">
                             <h4>InternSetu — Smart India Hackathon 2025</h4>
@@ -183,7 +190,6 @@
       const toggleBtn = document.getElementById('theme-toggle');
       const body = document.body;
 
-      // Load saved theme
       if (localStorage.getItem('theme') === 'light') {
         body.classList.add('light-mode');
       }

@@ -1,4 +1,3 @@
-/* -----------------------------------*/
 /* ----------------------------------- */
 * {
     box-sizing: border-box;
@@ -7,12 +6,11 @@
 }
 
 body {
-    /* Screenshot appears to use a clean sans-serif like Rubik or Inter */
-    font-family: 'Rubik', sans-serif; 
+    font-family: 'Rubik', sans-serif;
     transition: background-color 0.4s, color 0.4s;
     scroll-behavior: smooth;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll from layout shifts */
+    overflow-x: hidden;
 }
 
 .container {
@@ -22,32 +20,33 @@ body {
 }
 
 /* ----------------------------------- */
-/* 2. Color Variables & Theme Switch (Based on Screenshot's Dark Mode) */
+/* Color Variables */
 /* ----------------------------------- */
 
-/* Default (Dark Mode from screenshot) */
 :root {
-    --bg-primary: #1f2937; /* Dark Slate Blue-ish */
-    --bg-secondary: #1f2937; /* Same as primary for consistent background */
-    --text-primary: #e5e7eb; /* Off-white for main text */
-    --text-secondary: #9ca3af; /* Lighter gray for subtle text */
-    --accent-color: #6366f1; /* Purple-ish blue for highlights (like underline, links) */
-    --border-color: #374151; /* Darker gray for subtle borders/shadows */
-    --card-bg: #374151; /* Card background, slightly different from main bg */
+    --bg-primary: #1f2937;
+    --bg-secondary: #1a2230;
+    --text-primary: #e5e7eb;
+    --text-secondary: #9ca3af;
+    --accent-color: #6366f1;
+    --accent-muted: rgba(99,102,241,0.12);
+    --border-color: #374151;
+    --card-bg: #263044;
     --shadow-color: rgba(0, 0, 0, 0.4);
-    --header-bg-opacity: rgba(31, 41, 55, 0.9); /* Opaque header */
+    --header-bg-opacity: rgba(31, 41, 55, 0.92);
 }
 
 body.light-mode {
     --bg-primary: #f9fafb;
-    --bg-secondary: #ffffff;
+    --bg-secondary: #f1f5f9;
     --text-primary: #111827;
     --text-secondary: #6b7280;
     --accent-color: #4f46e5;
+    --accent-muted: rgba(79,70,229,0.08);
     --border-color: #d1d5db;
-    --card-bg: #f9fafb; /* Match light background */
-    --shadow-color: rgba(0, 0, 0, 0.15);
-    --header-bg-opacity: rgba(249, 250, 251, 0.9);
+    --card-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --header-bg-opacity: rgba(249, 250, 251, 0.92);
 }
 
 body {
@@ -56,7 +55,7 @@ body {
 }
 
 /* ----------------------------------- */
-/* 3. Header & Navigation (Exact Screenshot Match) */
+/* Header */
 /* ----------------------------------- */
 
 .header {
@@ -65,85 +64,77 @@ body {
     left: 0;
     width: 100%;
     z-index: 100;
-    background-color: var(--header-bg-opacity); /* Use opaque variable */
-    box-shadow: 0 2px 10px var(--shadow-color); /* Subtle shadow like screenshot */
-    backdrop-filter: blur(8px); /* Subtle blur for modern feel */
-    border-bottom: 1px solid var(--border-color); /* Slight bottom border */
+    background-color: var(--header-bg-opacity);
+    box-shadow: 0 1px 8px var(--shadow-color);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px; /* Increased horizontal padding for header content */
+    padding: 14px 40px;
 }
 
 .logo-placeholder {
-    color: var(--accent-color); /* Matches the screenshot's logo color */
-    display: flex; /* To center SVG if it's smaller */
+    color: var(--accent-color);
+    display: flex;
     align-items: center;
-    width: auto; /* Allow content to dictate width */
 }
 
-.logo-placeholder svg {
-    width: 30px; /* Larger icon as in screenshot */
-    height: 30px;
+.logo-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    color: var(--accent-color);
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 15px; /* Spacing between nav items */
+    gap: 12px;
 }
 
 .nav-link {
-    background-color: transparent; /* No background by default */
+    background-color: transparent;
     color: var(--text-primary);
     text-decoration: none;
-    padding: 8px 16px;
-    border: 1px solid var(--border-color); /* Matches button border in screenshot */
-    border-radius: 6px; /* Slightly more rounded corners */
-    font-size: 0.9rem;
+    padding: 7px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.88rem;
     font-weight: 500;
-    text-transform: capitalize; /* As in screenshot */
 }
 
-/* Theme toggle button */
 .theme-toggle-btn {
     background: transparent;
-    border: 1px solid var(--border-color); /* Matches the nav buttons */
+    border: 1px solid var(--border-color);
     border-radius: 6px;
-    padding: 8px 12px;
+    padding: 7px 11px;
     cursor: pointer;
-    display: flex; /* To align SVG */
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .theme-toggle-btn svg {
-    width: 20px; /* Adjust size to match screenshot */
-    height: 20px;
+    width: 19px;
+    height: 19px;
     color: var(--text-primary);
-    transition: color 0.2s ease-in-out;
+    transition: color 0.2s;
 }
 
-/* Shared transitions for interactive elements */
 .nav-link,
 .theme-toggle-btn,
 .btn-secondary {
-    transition: background-color 0.25s ease,
-                color 0.25s ease,
-                border-color 0.25s ease,
-                transform 0.2s ease,
-                box-shadow 0.25s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
 }
 
 .nav-link:hover {
-    background-color: var(--accent-color); /* Fill on hover */
-    color: var(--bg-primary); /* Text color changes on hover */
+    background-color: var(--accent-color);
+    color: #fff;
     border-color: var(--accent-color);
-    transform: translateY(-1px); /* Subtle lift */
-    box-shadow: 0 2px 8px var(--shadow-color);
+    transform: translateY(-1px);
 }
 
 .theme-toggle-btn:hover {
@@ -151,428 +142,346 @@ body {
     border-color: var(--accent-color);
 }
 
-.theme-toggle-btn:hover svg {
-    color: var(--bg-primary); /* Icon color changes on hover */
-}
+.theme-toggle-btn:hover svg { color: #fff; }
 
-/* No header-divider in the screenshot, so it's removed or hidden */
-.header-divider { 
-    display: none; 
-} 
-
-.menu-toggle-btn { 
-    display: none; 
-} /* Assuming desktop view for now */
-
+.menu-toggle-btn { display: none; }
 
 /* ----------------------------------- */
-/* 4. About Section (Screenshot Layout) */
+/* About Section */
 /* ----------------------------------- */
 
 .full-page-section {
-    min-height: 100vh; /* Make section fill viewport height */
-    padding-top: 100px; /* Space for fixed header */
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 60px;
     display: flex;
-    align-items: center; /* Center content vertically */
-    background-color: var(--bg-primary); /* Consistent background */
-    position: relative;
-    padding-bottom: 50px; /* Ensure some space at the bottom */
+    align-items: center;
+    background-color: var(--bg-primary);
 }
 
 .about-main-grid {
     display: grid;
-    grid-template-columns: 80px 1fr; /* Fixed sidebar width, then content */
-    gap: 40px; /* Space between sidebar and content */
-    padding: 0 40px; /* Horizontal padding for the entire section */
-    margin-top: 20px; /* Adjust as needed for vertical alignment */
-    overflow: visible;
+    grid-template-columns: 80px 1fr;
+    gap: 40px;
+    padding: 0 40px;
+    margin-top: 20px;
 }
 
-/* Social Sidebar (Left Side) */
 .social-sidebar {
     display: flex;
-    flex-direction: column; /* Keep vertical layout */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 80px;
     position: sticky;
     top: 150px;
     height: fit-content;
-    gap: 25px; /* Optional: spacing between icons */
+    gap: 22px;
 }
 
 .social-sidebar a {
-    color: var(--text-primary);
-    margin-bottom: 25px; /* Space between icons */
-    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    color: var(--text-secondary);
+    transition: color 0.2s, transform 0.2s;
 }
 
 .social-sidebar a:hover {
     color: var(--accent-color);
-    transform: translateY(-3px); /* Subtle lift on hover */
+    transform: translateY(-3px);
 }
 
-.social-sidebar svg {
-    width: 22px; /* Icon size */
-    height: 22px;
-}
+.social-sidebar svg { width: 22px; height: 22px; }
 
 .social-line {
     width: 2px;
-    height: 150px; /* Length of the line below icons */
-    background-color: var(--border-color); /* Matches screenshot */
-    opacity: 0.6;
-    margin-top: 10px;
+    height: 120px;
+    background-color: var(--border-color);
+    opacity: 0.5;
+    margin-top: 8px;
 }
 
-/* About Content Area */
 .about-content-area {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align text content to the left */
+    align-items: flex-start;
     justify-content: center;
-    padding-left: 20px; /* Offset from the social sidebar */
+    padding-left: 20px;
 }
 
 .section-title-about {
-    font-size: 2.8rem; /* Larger title as in screenshot */
+    font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 10px;
-    text-align: left; /* Aligned left */
 }
 
 .title-underline {
-    width: 70px; /* Length of the underline */
-    height: 4px;
-    background-color: var(--accent-color); /* Matches screenshot */
-    margin-bottom: 40px; /* Space below underline */
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin-bottom: 36px;
 }
 
 .about-details-grid {
     display: grid;
-    grid-template-columns: 350px 1fr; /* Image width then text width */
-    gap: 50px; /* Space between image and text */
-    align-items: center; /* Vertically align image and text content */
-    max-width: 100%; /* Ensure it doesn't overflow */
+    grid-template-columns: 320px 1fr;
+    gap: 50px;
+    align-items: center;
 }
 
-.about-image-wrapper {
-    flex-shrink: 0;
-    justify-self: center; /* Center image within its grid column */
-}
+.about-image-wrapper { justify-self: center; }
 
 .about-image {
-    width: 100%; /* Make image responsive within its container */
-    max-width: 350px; /* Max width for the image */
+    width: 100%;
+    max-width: 320px;
     height: auto;
     display: block;
+    border-radius: 8px;
 }
 
 .about-text-content {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between paragraphs */
+    gap: 18px;
 }
 
 .about-name {
-    font-size: 1.6rem; /* Name size from screenshot */
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.04em;
+}
+
+/* Status badge — replaces old open-to-internship green badge */
+.status-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: var(--accent-muted);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 20px;
+    font-size: 0.82rem;
     font-weight: 500;
+    width: fit-content;
+}
+
+/* Keep old .open-badge for backward compat but hide it */
+.open-badge { display: none; }
+
+.about-bio,
+.about-education {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 720px;
+    line-height: 1.8;
+}
+
+.about-bio strong,
+.about-education strong {
     color: var(--text-primary);
 }
 
-.about-bio, 
-.about-education {
-    font-size: 1.1rem; /* Body text size from screenshot */
-    color: var(--text-secondary);
-    max-width: 750px; /* Control text line length */
-    line-height: 1.8; /* Increased line height for readability */
-}
-
-.about-bio strong, 
-.about-education strong {
-    color: var(--text-primary); /* Bolder text for keywords */
-}
-
 .link-resume {
-    color: var(--text-primary); /* Link text color */
+    color: var(--text-primary);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     display: inline-flex;
     align-items: center;
-    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    gap: 6px;
+    transition: color 0.2s, transform 0.2s;
 }
 
 .link-resume:hover {
     color: var(--accent-color);
-    transform: translateX(5px); /* Arrow-like hover effect */
+    transform: translateX(4px);
 }
 
-.link-resume svg {
-    margin-left: 8px; /* Space for the arrow */
-    color: var(--accent-color); /* Arrow color */
-    width: 20px;
-    height: 20px;
-}
-
-/* Mobile adjustments for About section */
-@media (max-width: 991px) {
-    .about-main-grid {
-        grid-template-columns: 1fr; /* Stack sidebar and main content */
-        gap: 0; /* Remove gap when stacked */
-        padding: 0 15px; /* Less padding on smaller screens */
-    }
-
-    .social-sidebar {
-        position: static; /* No longer sticky */
-        flex-direction: row; /* Icons in a row */
-        width: 100%;
-        margin-bottom: 30px;
-        justify-content: center;
-        gap: 25px;
-        padding-top: 0;
-    }
-
-    .social-line { 
-        display: none; 
-    } /* Hide line in mobile */
-
-    .about-content-area {
-        padding-left: 0;
-        align-items: center; /* Center text content in mobile */
-    }
-
-    .section-title-about { 
-        text-align: center; 
-    }
-
-    .title-underline { 
-        margin: 10px auto 30px auto; 
-    } /* Center underline */
-
-    .about-details-grid {
-        grid-template-columns: 1fr; /* Stack image and text */
-        gap: 30px;
-    }
-
-    .about-text-content {
-        align-items: center; /* Center text block */
-    }
-
-    .about-bio, 
-    .about-education {
-        text-align: center; /* Center text in mobile */
-    }
-
-    .link-resume {
-        justify-content: center; /* Center download button */
-    }
-}
-
-@media (max-width: 767px) {
-    .nav-content { 
-        padding: 15px 20px; 
-    }
-
-    .nav-links { 
-        gap: 10px; 
-    }
-
-    .nav-link, 
-    .theme-toggle-btn { 
-        padding: 6px 10px; 
-        font-size: 0.8rem; 
-    }
-
-    .section-title-about { 
-        font-size: 2.2rem; 
-    }
-
-    .about-name { 
-        font-size: 1.4rem; 
-    }
-
-    .about-bio, 
-    .about-education, 
-    .link-resume { 
-        font-size: 1rem; 
-    }
-}
-
+.link-resume svg { color: var(--accent-color); width: 18px; height: 18px; }
 
 /* ----------------------------------- */
-/* 5. Generic Sections (Skills, Projects, Contact, Footer) */
+/* Skills Section */
 /* ----------------------------------- */
 
 section {
-    padding: 100px 0;
+    padding: 90px 0;
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
     text-align: center;
     color: var(--text-primary);
 }
 
-/* Skills Section */
-.skills-section { 
-    background-color: var(--bg-secondary); 
+.skills-section {
+    background-color: var(--bg-secondary);
+}
+
+.skills-category {
+    max-width: 900px;
+    margin: 0 auto 36px auto;
+}
+
+.skills-cat-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-color);
+    margin-bottom: 16px;
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
-    gap: 25px;
-    max-width: 900px;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .skill-card {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
-    border: 1px solid var(--border-color); /* Subtle border */
+    padding: 9px 18px;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     background-color: var(--card-bg);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Soft shadow */
-    transition: all 0.2s ease-in-out;
-    text-align: center;
+    transition: all 0.2s ease;
 }
 
 .skill-card:hover {
     background-color: var(--accent-color);
-    color: var(--bg-primary);
+    color: #fff;
     border-color: var(--accent-color);
-    transform: translateY(-5px) scale(1.02); 
-    box-shadow: 0 8px 15px var(--shadow-color);
+    transform: translateY(-3px);
 }
 
 .skill-card h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
+    white-space: nowrap;
 }
 
-
+/* ----------------------------------- */
 /* Projects Section */
-.projects-section { 
-    background-color: var(--bg-primary); 
+/* ----------------------------------- */
+
+.projects-section {
+    background-color: var(--bg-primary);
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px; 
-    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
-/* --- PROJECTS SECTION STYLES --- */
-
-/* Ensures the project card holds the image and clips the corners */
 .project-card {
     background-color: var(--card-bg);
     border-radius: 8px;
-    overflow: hidden; /* Clips the image corners */
-    box-shadow: 0 10px 20px var(--shadow-color);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex; 
-    flex-direction: column;
-}
-
-/* Slightly stronger hover for better feedback */
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 30px var(--shadow-color);
-}
-
-/* The container for the image - sets the fixed height */
-.project-image-wrapper {
-    width: 100%;
-    height: 200px; /* Adjust this height as needed */
-    overflow: hidden; 
-}
-
-/* The image itself - ensures it covers the wrapper area perfectly */
-.project-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Makes the image fit the container without distortion */
-    object-position: center; /* Centers the image */
-    display: block;
-}
-
-/* The text content wrapper */
-.project-details {
-    padding: 20px;
-    flex-grow: 1; 
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 16px var(--shadow-color);
+    transition: transform 0.25s, box-shadow 0.25s;
     display: flex;
     flex-direction: column;
 }
 
-.logo-text {
-    font-family: 'Great Vibes', cursive; /* Calligraphy-style font */
-    font-size: 30px;
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px var(--shadow-color);
+}
+
+.project-image-wrapper {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.project-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     color: var(--accent-color);
 }
 
-/* Ensure description takes up space to keep buttons aligned */
+.project-details h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
 .project-desc {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-    flex-grow: 1; /* Pushes the subsequent elements down */
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    flex-grow: 1;
 }
 
 .project-stack {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-secondary);
-    margin-bottom: 10px; /* Adjusted margin */
+    font-style: italic;
 }
 
 .btn-secondary {
     display: inline-block;
-    padding: 8px 15px;
+    padding: 7px 14px;
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
-    border-radius: 4px;
-    font-size: 0.9rem;
-    margin-top: auto; /* Pushes the button to the bottom */
+    border-radius: 5px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin-top: 4px;
+    margin-right: 6px;
+    width: fit-content;
 }
 
-.btn-secondary:hover:not(.disabled) {
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: #fff;
 }
 
-.btn-secondary.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    background-color: var(--border-color);
-    color: var(--text-secondary);
-}
-
-
+/* ----------------------------------- */
 /* Contact Section */
+/* ----------------------------------- */
+
 .contact-section {
     text-align: center;
-    padding-bottom: 100px;
     background-color: var(--bg-secondary);
 }
 
 .contact-prompt {
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    font-size: 1.1rem;
+    max-width: 640px;
+    margin: 0 auto 28px auto;
+    font-size: 1.05rem;
     color: var(--text-secondary);
 }
 
 .contact-details-row {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    max-width: 600px;
+    gap: 12px;
+    max-width: 520px;
     margin: 0 auto;
 }
 
@@ -582,9 +491,8 @@ section {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     background-color: var(--card-bg);
-    box-shadow: 0 2px 8px var(--shadow-color);
     color: var(--text-secondary);
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .contact-details-row a {
@@ -593,30 +501,70 @@ section {
     font-weight: 500;
 }
 
-.contact-details-row a:hover {
-    text-decoration: underline;
-}
+.contact-details-row a:hover { text-decoration: underline; }
 
+/* ----------------------------------- */
 /* Footer */
+/* ----------------------------------- */
+
 .footer {
-    padding: 30px 0;
+    padding: 28px 0;
     text-align: center;
     font-size: 0.8rem;
-    background-color: var(--bg-primary); /* Consistent dark background */
+    background-color: var(--bg-primary);
     color: var(--text-secondary);
     border-top: 1px solid var(--border-color);
 }
 
 /* ----------------------------------- */
-/* 6. Accessibility: Focus Visible */
+/* Responsive */
 /* ----------------------------------- */
 
+@media (max-width: 991px) {
+    .about-main-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0 15px;
+    }
+    .social-sidebar {
+        position: static;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 28px;
+        justify-content: center;
+        padding-top: 0;
+    }
+    .social-line { display: none; }
+    .about-content-area {
+        padding-left: 0;
+        align-items: center;
+    }
+    .section-title-about { text-align: center; }
+    .title-underline { margin: 10px auto 28px auto; }
+    .about-details-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .about-text-content { align-items: center; }
+    .about-bio, .about-education { text-align: center; }
+    .link-resume { justify-content: center; }
+    .status-badge { margin: 0 auto; }
+}
+
+@media (max-width: 767px) {
+    .nav-content { padding: 12px 18px; }
+    .nav-links { gap: 8px; }
+    .nav-link, .theme-toggle-btn { padding: 6px 10px; font-size: 0.8rem; }
+    .section-title-about { font-size: 2.1rem; }
+    .about-name { font-size: 1.3rem; }
+    .about-bio, .about-education { font-size: 0.98rem; }
+    .skills-grid { gap: 10px; }
+    .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* Accessibility */
 a:focus-visible,
-button:focus-visible,
-.nav-link:focus-visible,
-.theme-toggle-btn:focus-visible,
-.btn-secondary:focus-visible {
+button:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: 3px;
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
 }

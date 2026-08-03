@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash Ladlapure - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <title>Yash Ladlapure — Software Engineer Intern | Full-Stack &amp; Data Engineering</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -16,13 +16,13 @@
                 <div class="logo-placeholder">
                     <span class="logo-text">YL</span>
                 </div>
-
                 <div class="nav-links">
                     <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
                     <a href="#projects" class="nav-link">Projects</a>
                     <a href="#contact" class="nav-link">Contact</a>
                     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bulb">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"></path>
                             <path d="M12 17a3 3 0 100-6 3 3 0 000 6z"></path>
                         </svg>
@@ -36,6 +36,7 @@
             </nav>
         </header>
 
+        <!-- ABOUT / HERO -->
         <section id="about" class="about-section full-page-section">
             <div class="container about-main-grid">
                 <div class="social-sidebar">
@@ -52,7 +53,7 @@
                         </svg>
                     </a>
                     <a href="https://leetcode.com/u/YashLadlapure/" target="_blank" aria-label="LeetCode">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
                             <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
                         </svg>
                     </a>
@@ -65,22 +66,27 @@
 
                     <div class="about-details-grid">
                         <div class="about-image-wrapper">
-                            <img src="illustration-guy-with-laptop.webp" alt="Yash Ladlapure Avatar" class="about-image">
+                            <img src="illustration-guy-with-laptop.webp" alt="Yash Ladlapure" class="about-image">
                         </div>
                         <div class="about-text-content">
                             <h3 class="about-name">YASH SANTOSH LADLAPURE</h3>
-                            <span class="open-badge">&#128994; Open to Internship</span>
+                            <span class="status-badge">&#128188; Software Engineer Intern @ Augmented Transformations</span>
                             <p class="about-bio">
-                                I'm a B.Tech Computer Science student at MIT-WPU who likes building real products, not just class assignments. Most of my time goes into full‑stack web apps with React, Node.js, and TypeScript, plus a bit of Gemini and cloud when it makes sense.
+                                I'm a B.Tech CSE student at MIT-WPU (2023–2027) currently interning at
+                                <strong>Augmented Transformations Pvt. Ltd.</strong> as a Software Engineer Intern.
+                                My work there is mostly data engineering — building pipelines that move data from PostgreSQL into
+                                Parquet and Apache Iceberg tables stored on MinIO, then querying them with Trino inside a
+                                Docker Compose stack. On the side I ship full-stack projects with React, Node.js, and
+                                Gemini API.
                             </p>
                             <p class="about-education">
-                                Education: B.Tech in Computer Science &amp; Engineering, MIT World Peace University, Pune (2023–2027). Coursework that actually shows up in my projects: Data Structures &amp; Algorithms, Operating Systems, Computer Networks, Database Management Systems, Object Oriented Programming, Artificial Intelligence, Software Engineering, Cloud Computing.
+                                <strong>B.Tech in Computer Science &amp; Engineering</strong> — MIT World Peace University, Pune (2023–2027).
+                                Relevant coursework: Data Structures &amp; Algorithms, Database Management Systems,
+                                Operating Systems, Computer Networks, AI, Cloud Computing, Software Engineering.
                             </p>
                             <a href="https://drive.google.com/file/d/1Yh5DGG28wpA04wdRwGFKgzIdalFcyBs8/view?usp=sharing"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="link-resume">
-                                View Resume 
+                               target="_blank" rel="noopener noreferrer" class="link-resume">
+                                View Resume
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Arrow right">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
@@ -91,90 +97,128 @@
             </div>
         </section>
 
+        <!-- SKILLS -->
         <section id="skills" class="skills-section">
             <div class="container">
                 <h2 class="section-title">Skills.</h2>
-                <div class="skills-grid">
-                <div class="skill-card"><h4>JavaScript / TypeScript</h4></div>
-                <div class="skill-card"><h4>React.js / Next.js</h4></div>
-                <div class="skill-card"><h4>Node.js / Express</h4></div>
-                <div class="skill-card"><h4>MongoDB / MySQL</h4></div>
-                <div class="skill-card"><h4>Tailwind CSS / Bootstrap</h4></div>
-                <div class="skill-card"><h4>REST APIs &amp; Auth</h4></div>
-                <div class="skill-card"><h4>Docker &amp; Cloud (AWS / GCP)</h4></div>
-                <div class="skill-card"><h4>Git / GitHub / CI/CD</h4></div>
-                <div class="skill-card"><h4>DSA &amp; Competitive Programming</h4></div>
-                <div class="skill-card"><h4>Problem Solving &amp; Teamwork</h4></div>
+                <div class="skills-category">
+                    <h3 class="skills-cat-label">Data Engineering</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card"><h4>Apache Iceberg</h4></div>
+                        <div class="skill-card"><h4>Apache Parquet</h4></div>
+                        <div class="skill-card"><h4>Trino</h4></div>
+                        <div class="skill-card"><h4>MinIO / S3</h4></div>
+                        <div class="skill-card"><h4>Hive Metastore</h4></div>
+                        <div class="skill-card"><h4>PostgreSQL</h4></div>
+                        <div class="skill-card"><h4>pyarrow / pandas</h4></div>
+                        <div class="skill-card"><h4>Docker Compose</h4></div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="skills-cat-label">Full-Stack</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card"><h4>React / Next.js</h4></div>
+                        <div class="skill-card"><h4>Node.js / Express</h4></div>
+                        <div class="skill-card"><h4>JavaScript / TypeScript</h4></div>
+                        <div class="skill-card"><h4>Tailwind CSS</h4></div>
+                        <div class="skill-card"><h4>MongoDB / MySQL</h4></div>
+                        <div class="skill-card"><h4>REST APIs &amp; JWT Auth</h4></div>
+                        <div class="skill-card"><h4>Vercel / Render</h4></div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="skills-cat-label">Tools &amp; Other</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card"><h4>Python / SQL</h4></div>
+                        <div class="skill-card"><h4>Git / GitHub Actions</h4></div>
+                        <div class="skill-card"><h4>Linux / Bash</h4></div>
+                        <div class="skill-card"><h4>Gemini API</h4></div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- PROJECTS -->
         <section id="projects" class="projects-section">
             <div class="container">
                 <h2 class="section-title">Featured Projects.</h2>
                 <div class="projects-grid">
+
+                    <!-- Project 1: Trino-Postgres-MinIO (internship work — leads the section) -->
                     <div class="project-card">
-                        <div class="project-image-wrapper"> 
-                            <img src="Gemini_Generated_Image_4ruuom4ruuom4ruu.png" alt="Research Copilot Dashboard" class="project-image" loading="lazy">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="Data pipeline diagram" class="project-image" loading="lazy">
                         </div>
                         <div class="project-details">
-                            <h4>Research Copilot — AI Publication Compliance Assistant</h4>
-                            <p class="project-desc">A web app that helps researchers fix Springer LNCS and IEEE formatting issues before submission. You paste or upload a manuscript, pick a profile, and get rule‑based checks plus Gemini‑powered section suggestions, all shown in a diff so nothing changes behind your back.</p>
-                            <p class="project-stack">My role: frontend, backend, prompt design, and deployment. Tech: React, Node.js, Express, Gemini API, Vercel, Render.</p>
+                            <span class="project-tag">&#128188; Internship Work</span>
+                            <h4>Trino + PostgreSQL + MinIO Lakehouse</h4>
+                            <p class="project-desc">
+                                Set up a local data lakehouse using Trino, PostgreSQL, MinIO, and Hive Metastore.
+                                Seeded normalized datasets with Faker and pyarrow, exported them to Parquet-backed
+                                Iceberg tables on MinIO (S3-compatible), and queried across sources via Trino.
+                                The whole stack runs in Docker Compose so it's reproducible on any machine.
+                            </p>
+                            <p class="project-stack">Python · SQL · PostgreSQL · Apache Iceberg · Parquet · Trino · MinIO · Hive Metastore · Docker Compose · pyarrow · Faker</p>
+                            <a href="https://github.com/YashLadlapure" target="_blank" rel="noopener" class="btn-secondary">&#128196; GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Research Copilot -->
+                    <div class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="Gemini_Generated_Image_4ruuom4ruuom4ruu.png" alt="Research Copilot" class="project-image" loading="lazy">
+                        </div>
+                        <div class="project-details">
+                            <span class="project-tag">&#128279; Live</span>
+                            <h4>Research Copilot — Publication Compliance Checker</h4>
+                            <p class="project-desc">
+                                A web app that checks research manuscripts against Springer LNCS and IEEE formatting rules.
+                                You paste or upload a PDF, pick a profile, and it runs rule-based checks plus
+                                Gemini-powered section suggestions shown as a diff — so you can see exactly what changed
+                                before accepting anything.
+                            </p>
+                            <p class="project-stack">React · Node.js · Express · Vite · Gemini API · Vercel · Render</p>
                             <a href="https://research-copilot-eight.vercel.app" target="_blank" rel="noopener" class="btn-secondary">&#128279; Live Demo</a>
-                            <a href="https://github.com/YashLadlapure/research-copilot" target="_blank" rel="noopener" class="btn-secondary">&#128196; GitHub Repo</a>
+                            <a href="https://github.com/YashLadlapure/research-copilot" target="_blank" rel="noopener" class="btn-secondary">&#128196; GitHub</a>
                         </div>
                     </div>
 
+                    <!-- Project 3: Meme Vault -->
                     <div class="project-card">
                         <div class="project-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="Meme Vault Project" class="project-image" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="Meme Vault" class="project-image" loading="lazy">
                         </div>
                         <div class="project-details">
-                            <h4>Meme Vault — Full‑Stack Meme Sharing Platform</h4>
-                            <p class="project-desc">Side project where users can drop memes, like them, and share them. I built JWT login, REST APIs, a MongoDB schema for users and memes, an infinite scroll feed, and wired Cloudinary so images stay fast even when the app is busy.</p>
-                            <p class="project-stack">My role: everything from UI to API. Tech: React, Node.js, Express, MongoDB, Cloudinary, JWT.</p>
+                            <span class="project-tag">&#128279; Live</span>
+                            <h4>Meme Vault — Full-Stack Meme Platform</h4>
+                            <p class="project-desc">
+                                Built a meme sharing app with upload, like, and share features. JWT auth,
+                                10+ REST APIs with Express, a MongoDB schema for users and meme metadata,
+                                infinite scroll feed, and Cloudinary for image storage and delivery.
+                                Frontend deployed on Vercel, backend on Render.
+                            </p>
+                            <p class="project-stack">React · Node.js · Express · MongoDB · Cloudinary · JWT · Tailwind CSS · Vite</p>
                             <a href="https://meme-vault-x46t.vercel.app/" target="_blank" rel="noopener" class="btn-secondary">&#128279; Live Demo</a>
-                            <a href="https://github.com/YashLadlapure/meme-vault" target="_blank" rel="noopener" class="btn-secondary">&#128196; GitHub Repo</a>
+                            <a href="https://github.com/YashLadlapure/meme-vault" target="_blank" rel="noopener" class="btn-secondary">&#128196; GitHub</a>
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image-wrapper">
-                            <img
-                              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
-                              alt="InternSetu — students collaborating on a hackathon project"
-                              class="project-image"
-                              loading="lazy"
-                              width="1200"
-                              height="675"
-                            >
-                        </div>
-                        <div class="project-details">
-                            <h4>InternSetu — Smart India Hackathon 2025</h4>
-                            <p class="project-desc">Hackathon project for a MERN‑based platform that connects students with mentors and internships. I worked on guided learning flows, role‑based auth, and an internship recommendation idea using FastAPI and cloud services like AWS and GCP.</p>
-                            <p class="project-stack">My role: backend and integration. Tech: React, Node.js, Express, MongoDB, JWT, FastAPI, AWS, GCP, Docker.</p>
-                            <a href="https://github.com/YashLadlapure" target="_blank" rel="noopener" class="btn-secondary">&#128196; GitHub Overview</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- CONTACT -->
         <section id="contact" class="contact-section">
             <div class="container">
                 <h2 class="section-title">Get In Touch</h2>
                 <p class="contact-prompt">
-                    If you'd like to know more about my work or just want to say hello, send me a message. I'm always happy to talk about projects, internships, or new ideas.
+                    I'm open to data engineering and full-stack roles or internships. Feel free to reach out.
                 </p>
                 <div class="contact-details-row">
-                    <p>📧 Email: <a href="mailto:yash.ladlapure@gmail.com">yash.ladlapure@gmail.com</a></p>
-                    <p>📞 Phone: <a href="tel:+918180033454">+91-81800 33454</a></p>
-                    <p>🔗 LinkedIn: 
-                        <a href="https://linkedin.com/in/yash-ladlapure" target="_blank">
-                            linkedin.com/in/yash-ladlapure
-                        </a>
-                    </p>
+                    <p>&#128231; <a href="mailto:yash.ladlapure@gmail.com">yash.ladlapure@gmail.com</a></p>
+                    <p>&#128222; <a href="tel:+918180033454">+91-81800 33454</a></p>
+                    <p>&#128279; <a href="https://linkedin.com/in/yash-ladlapure" target="_blank">linkedin.com/in/yash-ladlapure</a></p>
+                    <p>&#128196; <a href="https://github.com/YashLadlapure" target="_blank">github.com/YashLadlapure</a></p>
                 </div>
             </div>
         </section>
@@ -189,18 +233,15 @@
     <script>
       const toggleBtn = document.getElementById('theme-toggle');
       const body = document.body;
-
       if (localStorage.getItem('theme') === 'light') {
         body.classList.add('light-mode');
       }
-
       toggleBtn.addEventListener('click', () => {
         body.classList.toggle('light-mode');
         const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
         localStorage.setItem('theme', theme);
       });
     </script>
-
     <script src="js/main.js"></script>
 </body>
 </html>

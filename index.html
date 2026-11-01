@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yash Ladlapure — Software Engineer Intern | Full-Stack &amp; Data Engineering</title>
+    <meta name="description" content="Yash Ladlapure is a B.Tech CSE student at MIT-WPU, Pune, and a Software Engineer Intern working on data engineering pipelines, lakehouse systems and full-stack projects.">
+    <meta name="theme-color" content="#1f2937">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yash Ladlapure — Software Engineer Intern">
+    <meta property="og:description" content="Data engineering pipelines, lakehouse systems and full-stack projects.">
+    <meta property="og:url" content="https://yashladlapure.github.io/portfolio-website/">
+    <link rel="canonical" href="https://yashladlapure.github.io/portfolio-website/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%236366f1'/%3E%3Ctext x='16' y='21' font-family='sans-serif' font-size='13' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EYL%3C/text%3E%3C/svg%3E">
+    <script>
+        // Apply the saved theme before first paint, so the page doesn't flash dark-to-light.
+        try {
+            if (localStorage.getItem('theme') === 'light') document.documentElement.classList.add('light-mode');
+        } catch (error) {
+            // Storage blocked: keep the default dark theme.
+        }
+    </script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div id="app">
         <header class="header">
             <nav class="container nav-content">
                 <div class="logo-placeholder">
                     <span class="logo-text">YL</span>
                 </div>
-                <div class="nav-links">
+                <div class="nav-links" id="nav-links">
                     <a href="#about" class="nav-link">About</a>
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#projects" class="nav-link">Projects</a>
@@ -28,13 +44,15 @@
                         </svg>
                     </button>
                 </div>
-                <button class="menu-toggle-btn">
+                <button class="menu-toggle-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
                         <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
                     </svg>
                 </button>
             </nav>
         </header>
+
+        <main id="main">
 
         <!-- ABOUT / HERO -->
         <section id="about" class="about-section full-page-section">
@@ -66,10 +84,10 @@
 
                     <div class="about-details-grid">
                         <div class="about-image-wrapper">
-                            <img src="illustration-guy-with-laptop.webp" alt="Yash Ladlapure" class="about-image">
+                            <img src="illustration-guy-with-laptop.webp" alt="Illustration of a person working on a laptop" class="about-image">
                         </div>
                         <div class="about-text-content">
-                            <h3 class="about-name">YASH SANTOSH LADLAPURE</h3>
+                            <h1 class="about-name">YASH SANTOSH LADLAPURE</h1>
                             <span class="status-badge">&#128188; Software Engineer Intern @ Augmented Transformations</span>
                             <p class="about-bio">
                                 I'm a B.Tech CSE student at MIT-WPU (2023–2027) currently interning at
@@ -147,7 +165,7 @@
                     <!-- Project 1: Trino-Postgres-MinIO (internship work — leads the section) -->
                     <div class="project-card">
                         <div class="project-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="Data pipeline diagram" class="project-image" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="" class="project-image" loading="lazy">
                         </div>
                         <div class="project-details">
                             <span class="project-tag">&#128188; Internship Work</span>
@@ -159,7 +177,7 @@
                                 The whole stack runs in Docker Compose so it's reproducible on any machine.
                             </p>
                             <p class="project-stack">Python · SQL · PostgreSQL · Apache Iceberg · Parquet · Trino · MinIO · Hive Metastore · Docker Compose · pyarrow · Faker</p>
-                            <a href="https://github.com/YashLadlapure" target="_blank" rel="noopener" class="btn-secondary">&#128196; GitHub</a>
+                            <a href="https://github.com/YashLadlapure/trino-postgres-minio-federation" target="_blank" rel="noopener" class="btn-secondary">&#128196; GitHub</a>
                         </div>
                     </div>
 
@@ -186,7 +204,7 @@
                     <!-- Project 3: Meme Vault -->
                     <div class="project-card">
                         <div class="project-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="Meme Vault" class="project-image" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="" class="project-image" loading="lazy">
                         </div>
                         <div class="project-details">
                             <span class="project-tag">&#128279; Live</span>
@@ -223,6 +241,8 @@
             </div>
         </section>
 
+        </main>
+
         <footer class="footer">
             <div class="container">
                 <p>Yash Santosh Ladlapure &copy; 2026</p>
@@ -230,18 +250,6 @@
         </footer>
     </div>
 
-    <script>
-      const toggleBtn = document.getElementById('theme-toggle');
-      const body = document.body;
-      if (localStorage.getItem('theme') === 'light') {
-        body.classList.add('light-mode');
-      }
-      toggleBtn.addEventListener('click', () => {
-        body.classList.toggle('light-mode');
-        const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
-        localStorage.setItem('theme', theme);
-      });
-    </script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

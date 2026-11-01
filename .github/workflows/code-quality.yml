@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "Running accessibility checks..."
           # Check all images have alt attributes
-          IMG_WITHOUT_ALT=$(grep -E '<img(?![^>]*alt=)' index.html | wc -l)
+          IMG_WITHOUT_ALT=$(grep '<img' index.html | grep -vc 'alt=' || true)
           if [ "$IMG_WITHOUT_ALT" -gt 0 ]; then
             echo "⚠️  Some images may be missing alt attributes"
           else
@@ -41,7 +41,7 @@ jobs:
       - name: Check SEO basics
         run: |
           echo "Running SEO checks..."
-          if grep -q '<meta name=\"description\"' index.html; then
+          if grep -q '<meta name="description"' index.html; then
             echo "✅ Meta description present"
           else
             echo "⚠️  Consider adding a meta description for better SEO"

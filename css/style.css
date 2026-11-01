@@ -28,7 +28,7 @@ body {
     --bg-secondary: #1a2230;
     --text-primary: #e5e7eb;
     --text-secondary: #9ca3af;
-    --accent-color: #6366f1;
+    --accent-color: #818cf8;
     --accent-muted: rgba(99,102,241,0.12);
     --border-color: #374151;
     --card-bg: #263044;
@@ -36,7 +36,7 @@ body {
     --header-bg-opacity: rgba(31, 41, 55, 0.92);
 }
 
-body.light-mode {
+.light-mode {
     --bg-primary: #f9fafb;
     --bg-secondary: #f1f5f9;
     --text-primary: #111827;
@@ -144,7 +144,17 @@ body {
 
 .theme-toggle-btn:hover svg { color: #fff; }
 
-.menu-toggle-btn { display: none; }
+.menu-toggle-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 7px 9px;
+    color: var(--text-primary);
+    cursor: pointer;
+}
 
 /* ----------------------------------- */
 /* About Section */
@@ -560,11 +570,51 @@ section {
     .about-bio, .about-education { font-size: 0.98rem; }
     .skills-grid { gap: 10px; }
     .projects-grid { grid-template-columns: 1fr; }
+
+    .menu-toggle-btn { display: inline-flex; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 12px 18px 16px;
+        background-color: var(--bg-primary);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .nav-links.open { display: flex; }
+    .nav-link { text-align: center; }
 }
 
 /* Accessibility */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 12px;
+    z-index: 200;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+.skip-link:focus { left: 12px; }
+
 a:focus-visible,
 button:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html, body { scroll-behavior: auto; }
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+    .project-card:hover, .skill-card:hover, .btn-secondary:hover { transform: none; }
 }

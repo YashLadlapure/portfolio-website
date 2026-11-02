@@ -302,7 +302,6 @@ body {
 
 .link-resume:hover {
     color: var(--accent-color);
-    transform: translateX(4px);
 }
 
 .link-resume svg { color: var(--accent-color); width: 18px; height: 18px; }
@@ -399,7 +398,6 @@ section {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 12px 28px var(--shadow-color);
 }
 

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-03T18:21:24.308Z",
+        "reason": "Claude: sizes live in src/styles.css (h1 up to 156px, h2 60px, body 17px); detector only saw index.html"
+      }
+    ]
+  }
+}

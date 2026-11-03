@@ -93,7 +93,7 @@ main{position:relative;z-index:1}
 .page{max-width:1180px;margin:0 auto;padding:120px 24px 80px;box-sizing:border-box;display:flex;flex-direction:column;gap:140px}
 .section{display:flex;flex-direction:column;gap:28px}
 .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px}
-.head > div{display:flex;flex-direction:column;gap:14px}
+.head > div:first-child{display:flex;flex-direction:column;gap:14px}
 .head > p{max-width:380px;font-size:15px;line-height:1.6;color:#B9C2D3}
 .profile{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:24px;align-items:center}
 .photo{border-radius:32px;padding:10px;display:flex;flex-direction:column;gap:10px;max-width:340px;width:100%;justify-self:center;box-sizing:border-box}

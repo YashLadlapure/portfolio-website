@@ -1,270 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash Ladlapure — Software Engineer Intern | Full-Stack &amp; Data Engineering</title>
-    <meta name="description" content="Yash Ladlapure is a B.Tech CSE student at MIT-WPU, Pune, and a Software Engineer Intern working on data engineering pipelines, lakehouse systems and full-stack projects.">
-    <meta name="theme-color" content="#1f2937">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Yash Ladlapure — Software Engineer Intern">
-    <meta property="og:description" content="Data engineering pipelines, lakehouse systems and full-stack projects.">
-    <meta property="og:url" content="https://yashladlapure.github.io/portfolio-website/">
-    <link rel="canonical" href="https://yashladlapure.github.io/portfolio-website/">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%236366f1'/%3E%3Ctext x='16' y='21' font-family='sans-serif' font-size='13' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EYL%3C/text%3E%3C/svg%3E">
-    <script>
-        // Apply the saved theme before first paint, so the page doesn't flash dark-to-light.
-        try {
-            if (localStorage.getItem('theme') === 'light') document.documentElement.classList.add('light-mode');
-        } catch (error) {
-            // Storage blocked: keep the default dark theme.
-        }
-    </script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/motion.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <div id="app">
-        <header class="header">
-            <nav class="container nav-content">
-                <div class="logo-placeholder">
-                    <span class="logo-text">YL</span>
-                </div>
-                <div class="nav-links" id="nav-links">
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"></path>
-                            <path d="M12 17a3 3 0 100-6 3 3 0 000 6z"></path>
-                        </svg>
-                    </button>
-                </div>
-                <button class="menu-toggle-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
-                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-                    </svg>
-                </button>
-            </nav>
-        </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yash Ladlapure — Software Engineer</title>
+    <meta name="description" content="Yash Ladlapure: software engineer intern and CS student at MIT-WPU, Pune. Data pipelines underneath, interfaces that move on top." />
+    <meta name="theme-color" content="#050912" />
+    <meta property="og:title" content="Yash Ladlapure — Software Engineer" />
+    <meta property="og:description" content="Data pipelines underneath, interfaces that move on top." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="yash.jpg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23F4C27A'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='13' text-anchor='middle' fill='%23140D03'%3EYL%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="./assets/index-C28nfDyb.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BEHiSK3J.css">
+  </head>
+  <body class="lens">
+    <a class="skip" href="#profile">Skip to content</a>
 
-        <main id="main">
+    <!-- The lens that liquid-glass controls refract the page through (Chromium). -->
+    <svg class="svg-defs" aria-hidden="true" focusable="false">
+      <filter id="liquid-lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="2" result="soft" />
+        <feDisplacementMap in="SourceGraphic" in2="soft" scale="38" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
 
-        <!-- ABOUT / HERO -->
-        <section id="about" class="about-section full-page-section">
-            <div class="container about-main-grid">
-                <div class="social-sidebar">
-                    <a href="https://github.com/YashLadlapure" target="_blank" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.372 0 0 5.372 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.043-1.61-4.043-1.61-.546-1.386-1.332-1.755-1.332-1.755-1.09-.743.083-.728.083-.728 1.205.084 1.838 1.238 1.838 1.238 1.07 1.836 2.808 1.304 3.49.997.108-.775.42-1.304.762-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.234-3.218-.124-.303-.535-1.52.117-3.178 0 0 1.008-.32 3.301 1.23a11.413 11.413 0 016 0c2.293-1.55 3.301-1.23 3.301-1.23.652 1.658.241 2.875.118 3.178.766.838 1.234 1.908 1.234 3.218 0 4.61-2.805 5.626-5.474 5.925.43.372.823 1.102.823 2.223 0 1.604-.014 2.896-.014 3.284 0 .318.216.694.829.576C20.562 21.8 24 17.302 24 12c0-6.628-5.372-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com/in/yash-ladlapure" target="_blank" aria-label="LinkedIn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
-                    <a href="https://leetcode.com/u/YashLadlapure/" target="_blank" aria-label="LeetCode">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                            <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
-                        </svg>
-                    </a>
-                    <div class="social-line"></div>
-                </div>
-
-                <div class="about-content-area">
-                    <h2 class="section-title-about">About Me</h2>
-                    <div class="title-underline"></div>
-
-                    <div class="about-details-grid">
-                        <div class="about-image-wrapper">
-                            <img src="illustration-guy-with-laptop.webp" alt="Illustration of a person working on a laptop" class="about-image">
-                        </div>
-                        <div class="about-text-content">
-                            <h1 class="about-name">YASH SANTOSH LADLAPURE</h1>
-                            <span class="status-badge">&#128188; Software Engineer Intern @ Augmented Transformations</span>
-                            <p class="about-bio">
-                                I'm a B.Tech CSE student at MIT-WPU (2023–2027) currently interning at
-                                <strong>Augmented Transformations Pvt. Ltd.</strong> as a Software Engineer Intern.
-                                My work there is mostly data engineering — building pipelines that move data from PostgreSQL into
-                                Parquet and Apache Iceberg tables stored on MinIO, then querying them with Trino inside a
-                                Docker Compose stack. On the side I ship full-stack projects with React, Node.js, and
-                                Gemini API.
-                            </p>
-                            <p class="about-education">
-                                <strong>B.Tech in Computer Science &amp; Engineering</strong> — MIT World Peace University, Pune (2023–2027).
-                                Relevant coursework: Data Structures &amp; Algorithms, Database Management Systems,
-                                Operating Systems, Computer Networks, AI, Cloud Computing, Software Engineering.
-                            </p>
-                            <a href="https://drive.google.com/file/d/104pe7xheHN2n5bomFnGbit_78s4-ty9b/view?usp=sharing"
-                               target="_blank" rel="noopener noreferrer" class="link-resume">
-                                View Resume
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Arrow right">
-                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="marquee" aria-hidden="true">
-            <div class="marquee-track">
-                <div class="marquee-set">
-                    <span>Python</span><span>SQL</span><span>PostgreSQL</span><span>Power BI</span><span>Trino</span><span>MinIO</span><span>Apache Iceberg</span><span>Docker</span><span>React</span><span>Node.js</span>
-                </div>
-                <div class="marquee-set">
-                    <span>Python</span><span>SQL</span><span>PostgreSQL</span><span>Power BI</span><span>Trino</span><span>MinIO</span><span>Apache Iceberg</span><span>Docker</span><span>React</span><span>Node.js</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- SKILLS -->
-        <section id="skills" class="skills-section">
-            <div class="container">
-                <h2 class="section-title">Skills.</h2>
-                <div class="skills-category">
-                    <h3 class="skills-cat-label">Data Engineering</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card"><h4>Apache Iceberg</h4></div>
-                        <div class="skill-card"><h4>Apache Parquet</h4></div>
-                        <div class="skill-card"><h4>Trino</h4></div>
-                        <div class="skill-card"><h4>MinIO / S3</h4></div>
-                        <div class="skill-card"><h4>Hive Metastore</h4></div>
-                        <div class="skill-card"><h4>PostgreSQL</h4></div>
-                        <div class="skill-card"><h4>pyarrow / pandas</h4></div>
-                        <div class="skill-card"><h4>Docker Compose</h4></div>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3 class="skills-cat-label">Full-Stack</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card"><h4>React / Next.js</h4></div>
-                        <div class="skill-card"><h4>Node.js / Express</h4></div>
-                        <div class="skill-card"><h4>JavaScript / TypeScript</h4></div>
-                        <div class="skill-card"><h4>Tailwind CSS</h4></div>
-                        <div class="skill-card"><h4>MongoDB / MySQL</h4></div>
-                        <div class="skill-card"><h4>REST APIs &amp; JWT Auth</h4></div>
-                        <div class="skill-card"><h4>Vercel / Render</h4></div>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3 class="skills-cat-label">Tools &amp; Other</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card"><h4>Python / SQL</h4></div>
-                        <div class="skill-card"><h4>Git / GitHub Actions</h4></div>
-                        <div class="skill-card"><h4>Linux / Bash</h4></div>
-                        <div class="skill-card"><h4>Gemini API</h4></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <h2 class="section-title">Featured Projects.</h2>
-                <div class="projects-grid">
-
-                    <!-- Project 1: Trino-Postgres-MinIO (internship work — leads the section) -->
-                    <div class="project-card">
-                        <div class="project-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="" class="project-image" loading="lazy">
-                        </div>
-                        <div class="project-details">
-                            <span class="project-tag">&#128188; Internship Work</span>
-                            <h4>Trino + PostgreSQL + MinIO Lakehouse</h4>
-                            <p class="project-desc">
-                                Set up a local data lakehouse using Trino, PostgreSQL, MinIO, and Hive Metastore.
-                                Seeded normalized datasets with Faker and pyarrow, exported them to Parquet-backed
-                                Iceberg tables on MinIO (S3-compatible), and queried across sources via Trino.
-                                The whole stack runs in Docker Compose so it's reproducible on any machine.
-                            </p>
-                            <p class="project-stack">Python · SQL · PostgreSQL · Apache Iceberg · Parquet · Trino · MinIO · Hive Metastore · Docker Compose · pyarrow · Faker</p>
-                            <a href="https://github.com/YashLadlapure/trino-postgres-minio-federation" target="_blank" rel="noopener" class="btn-secondary">&#128196; GitHub</a>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: Research Copilot -->
-                    <div class="project-card">
-                        <div class="project-image-wrapper">
-                            <img src="Gemini_Generated_Image_4ruuom4ruuom4ruu.png" alt="Research Copilot" class="project-image" loading="lazy">
-                        </div>
-                        <div class="project-details">
-                            <span class="project-tag">&#128279; Live</span>
-                            <h4>Research Copilot — Publication Compliance Checker</h4>
-                            <p class="project-desc">
-                                A web app that checks research manuscripts against Springer LNCS and IEEE formatting rules.
-                                You paste or upload a PDF, pick a profile, and it runs rule-based checks plus
-                                Gemini-powered section suggestions shown as a diff — so you can see exactly what changed
-                                before accepting anything.
-                            </p>
-                            <p class="project-stack">React · Node.js · Express · Vite · Gemini API · Vercel · Render</p>
-                            <a href="https://research-copilot-eight.vercel.app" target="_blank" rel="noopener" class="btn-secondary">&#128279; Live Demo</a>
-                            <a href="https://github.com/YashLadlapure/research-copilot" target="_blank" rel="noopener" class="btn-secondary">&#128196; GitHub</a>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: Meme Vault -->
-                    <div class="project-card">
-                        <div class="project-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="" class="project-image" loading="lazy">
-                        </div>
-                        <div class="project-details">
-                            <span class="project-tag">&#128279; Live</span>
-                            <h4>Meme Vault — Full-Stack Meme Platform</h4>
-                            <p class="project-desc">
-                                Built a meme sharing app with upload, like, and share features. JWT auth,
-                                10+ REST APIs with Express, a MongoDB schema for users and meme metadata,
-                                infinite scroll feed, and Cloudinary for image storage and delivery.
-                                Frontend deployed on Vercel, backend on Render.
-                            </p>
-                            <p class="project-stack">React · Node.js · Express · MongoDB · Cloudinary · JWT · Tailwind CSS · Vite</p>
-                            <a href="https://meme-vault-x46t.vercel.app/" target="_blank" rel="noopener" class="btn-secondary">&#128279; Live Demo</a>
-                            <a href="https://github.com/YashLadlapure/meme-vault" target="_blank" rel="noopener" class="btn-secondary">&#128196; GitHub</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="contact-prompt">
-                    I'm open to data engineering and full-stack roles or internships. Feel free to reach out.
-                </p>
-                <div class="contact-details-row">
-                    <p>&#128231; <a href="mailto:yash.ladlapure@gmail.com">yash.ladlapure@gmail.com</a></p>
-                    <p>&#128222; <a href="tel:+918180033454">+91-81800 33454</a></p>
-                    <p>&#128279; <a href="https://linkedin.com/in/yash-ladlapure" target="_blank">linkedin.com/in/yash-ladlapure</a></p>
-                    <p>&#128196; <a href="https://github.com/YashLadlapure" target="_blank">github.com/YashLadlapure</a></p>
-                </div>
-            </div>
-        </section>
-
-        </main>
-
-        <footer class="footer">
-            <div class="container">
-                <p>Yash Santosh Ladlapure &copy; 2026</p>
-            </div>
-        </footer>
+    <!-- The ocean: a live WebGL2 fragment shader behind the whole page (src/ocean.js). -->
+    <div class="ocean" aria-hidden="true">
+      <canvas></canvas>
+      <div class="ocean__shade"></div>
+      <div class="ocean__vignette"></div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-    <script src="js/main.js" defer></script>
-</body>
+    <header class="nav-wrap">
+      <nav class="nav liquid" aria-label="Main">
+        <a class="brand" href="#top"><span class="mark display">YL</span><span>Yash Ladlapure</span></a>
+        <div class="navlinks">
+          <span class="nav__glider" aria-hidden="true"></span>
+          <a class="navlink" href="#profile">Profile</a>
+          <a class="navlink" href="#stack">Stack</a>
+          <a class="navlink" href="#journey">Experience</a>
+          <a class="navlink" href="#work">Works</a>
+          <a class="navlink" href="#contact">Contact</a>
+        </div>
+        <a class="btn liquid btn-amber" data-resume href="Yash_Ladlapure_Resume.pdf" target="_blank" rel="noopener">
+          <svg class="ic" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+          Résumé
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="top" class="hero">
+        <p class="mono fade hero__role" style="animation-delay:.1s">Software Engineer · Data &amp; Motion</p>
+        <h1 class="display"><span class="word" style="animation-delay:.15s">Yash</span> <span class="word" style="animation-delay:.3s">Ladlapure</span></h1>
+        <p class="fade hero__sub" style="animation-delay:.55s">I build data pipelines underneath and interfaces that move on top.</p>
+        <div class="fade hero__cta" style="animation-delay:.7s">
+          <a class="btn liquid btn-amber" href="#work">See my work
+            <svg class="ic" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+          </a>
+          <a class="btn liquid" href="#contact">Get in touch</a>
+        </div>
+        <div class="liquid fade hero__now" style="animation-delay:.9s">
+          <span class="dot"></span>
+          <span><span class="label">Now</span><b>SWE Intern · Augmented Transformations</b></span>
+        </div>
+        <div class="mono fade hero__geo" style="animation-delay:.9s">PUNE, INDIA<br />18.5204° N · 73.8567° E</div>
+        <a class="hero__cue mono" href="#profile" aria-label="Scroll to profile"><span>Scroll</span><span class="cue"></span></a>
+      </section>
+
+      <div class="page">
+        <section id="profile" class="section">
+          <div class="profile">
+            <figure class="glass reveal photo">
+              <img src="yash.jpg" alt="Portrait of Yash Ladlapure in a dark suit" width="877" height="877" />
+              <figcaption><span>Pune, Maharashtra</span><span class="mono">B.Tech CSE · ’27</span></figcaption>
+            </figure>
+            <div class="glass reveal id">
+              <p class="eyebrow">01 — Profile</p>
+              <h2 class="display">Yash Santosh<br />Ladlapure</h2>
+              <div class="chips">
+                <span class="chip">Data Engineering</span><span class="chip">Full-stack</span><span class="chip">Python &amp; SQL</span>
+                <span class="chip">React · Next.js</span><span class="chip">Lakehouse</span><span class="chip">Motion design</span>
+              </div>
+              <p>I study computer science at MIT-WPU in Pune and work as a software engineer intern at Augmented Transformations, where I build Python and SQL pipelines that carry PostgreSQL data into an Apache Iceberg lakehouse. Outside work I build full-stack apps and AI tools, and I care about how an interface moves as much as how its data flows.</p>
+              <div class="row">
+                <a class="icon-btn liquid" data-email aria-label="Email Yash">
+                  <svg class="ic" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+                <a class="icon-btn liquid" data-link="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn" hidden>
+                  <svg class="ic" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a class="icon-btn liquid" data-link="github" target="_blank" rel="noopener" aria-label="GitHub" hidden>
+                  <svg class="ic" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+                <a class="btn liquid" data-resume target="_blank" rel="noopener">Read my résumé
+                  <svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="glass reveal stats" id="stats"></div>
+        </section>
+
+        <section id="stack" class="glass reveal stack">
+          <div class="head">
+            <div><p class="eyebrow">02 — Tools I ship with</p><h2 class="display h2">In my stack</h2></div>
+            <p>Pick a tool to see where I have actually used it.</p>
+          </div>
+          <div class="stack__body">
+            <div class="groups" id="groups"></div>
+            <div class="glass-deep readout" aria-live="polite">
+              <span class="label">Where I used it</span>
+              <b id="tool-name"></b>
+              <p id="tool-does"></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="journey" class="section" style="gap:40px">
+          <div class="head reveal">
+            <div><p class="eyebrow">03 — Experience</p><h2 class="display h2" style="max-width:760px">From first commit to the lakehouse.</h2></div>
+          </div>
+          <div class="list" id="stops"></div>
+        </section>
+
+        <section id="work" class="section" style="gap:36px">
+          <div class="head reveal">
+            <div><p class="eyebrow">04 — Selected work</p><h2 class="display h2">Works</h2></div>
+            <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
+          </div>
+          <div class="works" id="works"></div>
+        </section>
+
+        <section id="contact" class="glass reveal contact">
+          <p class="eyebrow">05 — Contact</p>
+          <h2 class="display">Let’s build something that keeps moving.</h2>
+          <p>Open to a six-month internship from January to June 2027 and full-time roles from July 2027. Internships, projects, or just hello: my inbox is open.</p>
+          <div class="row" style="justify-content:center">
+            <a class="btn liquid btn-amber" data-email>
+              <svg class="ic" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span data-email-text></span>
+            </a>
+            <button type="button" class="btn liquid" id="copy">Copy address</button>
+            <a class="btn liquid" data-resume target="_blank" rel="noopener">Résumé (PDF)</a>
+          </div>
+          <p class="mono">PUNE · OPEN TO BANGALORE, HYDERABAD, MUMBAI AND REMOTE</p>
+        </section>
+      </div>
+
+      <footer class="glass-deep">
+        <div class="foot">
+          <div><b>Reach</b><a data-email>Email</a><a data-link="linkedin" target="_blank" rel="noopener" hidden>LinkedIn</a><a data-resume target="_blank" rel="noopener">Résumé</a></div>
+          <div><b>Build</b><a data-link="github" target="_blank" rel="noopener" hidden>GitHub</a><a href="#work">Works</a><a href="#stack">Stack</a></div>
+          <div><b>Based in</b><span>Pune, India</span><span>MIT World Peace University</span></div>
+        </div>
+        <div class="legal"><span>© 2026 Yash Ladlapure</span><span class="mono">The ocean is a live WebGL shader</span></div>
+      </footer>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yash Ladlapure — Software Engineer</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#050912;color:#EEF1F7;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#F4C27A}a:hover{color:#FFE0B0}
+::selection{background:#F4C27A;color:#140D03}
+:focus-visible{outline:2px solid #F4C27A;outline-offset:3px}
+.display{font-family:Unbounded,Manrope,sans-serif;letter-spacing:-0.02em}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;letter-spacing:0.04em}
+.ic{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.glass{background:linear-gradient(155deg,rgba(255,255,255,.11),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 30px 70px -30px rgba(0,0,0,.7)}
+.glass-deep{background:rgba(6,11,24,.55);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(26px) saturate(140%);-webkit-backdrop-filter:blur(26px) saturate(140%);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font:600 15px/1 Manrope,sans-serif;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .25s,border-color .25s,color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-solid{background:#F4C27A;color:#140D03}
+.btn-solid:hover{background:#FFD69A;color:#140D03}
+.btn-glass{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#EEF1F7;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.btn-glass:hover{background:rgba(255,255,255,.15);color:#fff}
+.icon-btn{width:48px;height:48px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;color:#EEF1F7;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);transition:background .25s,transform .25s,color .25s}
+.icon-btn:hover{background:#F4C27A;color:#140D03;transform:translateY(-2px)}
+.chip{display:inline-flex;align-items:center;height:32px;padding:0 14px;border-radius:999px;font-size:13px;font-weight:600;color:#DDE3EE;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13)}
+.navlink{display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:999px;color:#B9C2D3;text-decoration:none;font-size:14px;font-weight:600;transition:color .2s,background .2s}
+.navlink:hover{color:#fff;background:rgba(255,255,255,.07)}
+.navlink.on{color:#140D03;background:#F4C27A}
+.pill{height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#C7CFDD;font:600 14px Manrope,sans-serif;cursor:pointer;transition:all .2s}
+.pill:hover{color:#fff;border-color:rgba(255,255,255,.32)}
+.pill.on{background:#EEF1F7;color:#0A0F1C;border-color:#EEF1F7}
+.tile{min-height:48px;padding:0 16px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);color:#DDE3EE;font:600 14px Manrope,sans-serif;cursor:pointer;transition:all .2s;text-align:left}
+.tile:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.26)}
+.tile.on{background:rgba(244,194,122,.16);border-color:#F4C27A;color:#FFE3B8}
+.card{position:relative;border-radius:28px;overflow:hidden;cursor:pointer;transition:transform .45s cubic-bezier(.2,.8,.2,1),border-color .3s;text-align:left;color:inherit;font:inherit;padding:0;width:100%}
+.card::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.12),transparent 45%);opacity:0;transition:opacity .3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.28)}
+.card:hover::after{opacity:1}
+.card.open{border-color:rgba(244,194,122,.6)}
+.preview{position:relative;height:190px;margin:10px;border-radius:20px;overflow:hidden;background-color:#0B1426;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:22px 22px;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;box-sizing:border-box}
+.preview::before{content:"";position:absolute;width:260px;height:260px;right:-70px;top:-90px;border-radius:50%;filter:blur(50px);opacity:.55}
+.hue-amber .preview::before{background:#F4A55A}
+.hue-teal .preview::before{background:#2FB3A5}
+.hue-violet .preview::before{background:#7C6CF0}
+.hue-rose .preview::before{background:#E0657F}
+.hue-sky .preview::before{background:#4C9BE8}
+.dot{width:8px;height:8px;border-radius:50%;background:#6EE7A8;box-shadow:0 0 0 0 rgba(110,231,168,.6);animation:pulse 2.2s infinite}
+.word{display:inline-block;animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both}
+.fade{animation:fadeup 1s cubic-bezier(.2,.8,.2,1) both}
+.cue{width:1px;height:56px;background:linear-gradient(#F4C27A,transparent);animation:cue 2.4s ease-in-out infinite;transform-origin:top}
+.tick{position:relative;padding-left:28px}
+.tick::before{content:"";position:absolute;left:0;top:8px;width:11px;height:11px;border-radius:50%;border:2px solid #F4C27A;background:#050912}
+.tick.now::before{background:#F4C27A;box-shadow:0 0 0 6px rgba(244,194,122,.16)}
+@keyframes rise{from{opacity:0;transform:translateY(60%) rotate(4deg);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+@keyframes fadeup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(110,231,168,.55)}70%{box-shadow:0 0 0 10px rgba(110,231,168,0)}100%{box-shadow:0 0 0 0 rgba(110,231,168,0)}}
+@keyframes cue{0%{transform:scaleY(0);opacity:1}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+@supports (animation-timeline: view()){
+.reveal{animation:fadeup linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
+}
+@media (max-width: 860px){
+.navlinks{display:none !important}
+.split{grid-template-columns:minmax(0,1fr) !important}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+.works{grid-template-columns:minmax(0,1fr) !important}
+.foot{grid-template-columns:minmax(0,1fr) !important}
+.hero-meta{display:none !important}
+}
+@media (prefers-reduced-motion: reduce){
+html{scroll-behavior:auto}
+.word,.fade,.reveal,.cue,.dot{animation:none !important}
+.card,.btn,.icon-btn{transition:none}
+}
+</style>
+</helmet>
+<div style="position: relative; min-height: 100vh; overflow-x: clip">
+
+<!-- The ocean: a live WebGL fragment shader fixed behind the whole page -->
+<div aria-hidden="true" style="position: fixed; inset: 0; z-index: 0; background: linear-gradient(180deg, #080C1E 0%, #1C1E3C 38%, #C9785A 50%, #0B1830 52%, #040811 100%)">
+<canvas ref="{{ cvRef }}" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block"></canvas>
+<div ref="{{ shadeRef }}" style="position: absolute; inset: 0; background: #040812; opacity: 0"></div>
+<div style="position: absolute; inset: 0; background: radial-gradient(120% 80% at 50% 45%, transparent 55%, rgba(3,6,14,.65) 100%)"></div>
+</div>
+
+<!-- Navigation -->
+<header style="position: fixed; top: 16px; left: 0; right: 0; z-index: 20; display: flex; justify-content: center; padding: 0 16px; box-sizing: border-box">
+<nav class="glass" aria-label="Main" style="width: 100%; max-width: 1180px; border-radius: 999px; padding: 8px 8px 8px 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #EEF1F7">
+<span class="display" style="width: 36px; height: 36px; border-radius: 12px; background: #F4C27A; color: #140D03; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600">YL</span>
+<span style="font-weight: 700; font-size: 15px">Yash Ladlapure</span>
+</a>
+<div class="navlinks" style="display: flex; gap: 4px">
+<sc-for list="{{ nav }}" as="n" hint-placeholder-count="5">
+<a class="{{ n.cls }}" href="{{ n.href }}">{{ n.label }}</a>
+</sc-for>
+</div>
+<a class="btn btn-solid" href="/_blob/e6ff1f64e11380bc099162fc5993b064" target="_blank" rel="noopener" style="min-height: 44px; padding: 0 18px; font-size: 14px">
+<svg class="ic" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+Résumé
+</a>
+</nav>
+</header>
+
+<main style="position: relative; z-index: 1">
+
+<!-- HERO -->
+<section id="top" style="position: relative; height: 100vh; min-height: 640px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 24px; box-sizing: border-box">
+<div style="position: absolute; inset: 0; background: radial-gradient(46% 34% at 50% 46%, rgba(5,8,22,.42), transparent 75%); pointer-events: none"></div>
+<p class="mono fade" style="position: relative; margin: 0 0 22px; font-size: 13px; color: #FFE3B8; text-transform: uppercase; animation-delay: .1s">Software Engineer · Data &amp; Motion</p>
+<h1 class="display" style="position: relative; margin: 0; font-size: clamp(52px, 10.5vw, 156px); line-height: .95; font-weight: 500; color: #FFFFFF; text-shadow: 0 8px 50px rgba(4,8,20,.5); overflow: hidden; padding-bottom: .08em">
+<span class="word" style="animation-delay: .15s">Yash</span>
+<span class="word" style="animation-delay: .3s">Ladlapure</span>
+</h1>
+<p class="fade" style="position: relative; margin: 26px 0 0; max-width: 560px; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.5; color: #E4E8F1; animation-delay: .55s">I build data pipelines underneath and interfaces that move on top.</p>
+<div class="fade" style="position: relative; margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; animation-delay: .7s">
+<a class="btn btn-solid" href="#work">See my work
+<svg class="ic" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+</a>
+<a class="btn btn-glass" href="#contact">Get in touch</a>
+</div>
+
+<div class="glass fade hero-meta" style="position: absolute; left: 32px; bottom: 32px; border-radius: 18px; padding: 14px 18px; display: flex; align-items: center; gap: 12px; text-align: left; animation-delay: .9s">
+<span class="dot"></span>
+<span style="display: flex; flex-direction: column; gap: 3px">
+<span class="mono" style="font-size: 11px; color: #B9C2D3; text-transform: uppercase">Now</span>
+<span style="font-size: 14px; font-weight: 600">SWE Intern · Augmented Transformations</span>
+</span>
+</div>
+<div class="mono fade hero-meta" style="position: absolute; right: 32px; bottom: 36px; font-size: 12px; color: #C9D0DD; text-align: right; line-height: 1.7; animation-delay: .9s">PUNE, INDIA<br>18.5204° N · 73.8567° E</div>
+<a href="#profile" aria-label="Scroll to profile" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; color: #C9D0DD; text-decoration: none; min-width: 48px; min-height: 48px">
+<span class="mono" style="font-size: 11px; text-transform: uppercase">Scroll</span>
+<span class="cue"></span>
+</a>
+</section>
+
+<div style="max-width: 1180px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 140px; padding-top: 120px; padding-bottom: 80px">
+
+<!-- PROFILE -->
+<section id="profile" style="display: flex; flex-direction: column; gap: 28px">
+<div class="split" style="display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 24px; align-items: center">
+<figure class="glass reveal" style="margin: 0; border-radius: 32px; padding: 10px; display: flex; flex-direction: column; gap: 10px; max-width: 340px; width: 100%; justify-self: center">
+<img src="/_blob/cd60b1429ca09b19ee1f7eee97f347b6" alt="Portrait of Yash Ladlapure in a dark suit" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; border-radius: 26px; display: block">
+<figcaption style="display: flex; justify-content: space-between; align-items: center; padding: 6px 10px 8px; font-size: 13px; color: #B9C2D3">
+<span>Pune, Maharashtra</span>
+<span class="mono" style="font-size: 12px">B.Tech CSE · ’27</span>
+</figcaption>
+</figure>
+<div class="glass reveal" style="border-radius: 36px; padding: clamp(28px, 4vw, 52px); display: flex; flex-direction: column; gap: 26px; justify-content: center">
+<p class="mono" style="margin: 0; font-size: 12px; color: #F4C27A; text-transform: uppercase">01 — Profile</p>
+<h2 class="display" style="margin: 0; font-size: clamp(36px, 4.6vw, 64px); line-height: 1; font-weight: 500">Yash Santosh<br>Ladlapure</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="chip">Data Engineering</span>
+<span class="chip">Full-stack</span>
+<span class="chip">Python &amp; SQL</span>
+<span class="chip">React · Next.js</span>
+<span class="chip">Lakehouse</span>
+<span class="chip">Motion design</span>
+</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #D5DBE6">I study computer science at MIT-WPU in Pune and work as a software engineer intern at Augmented Transformations, where I build Python and SQL pipelines that carry PostgreSQL data into an Apache Iceberg lakehouse. Outside work I build full-stack apps and AI tools, and I care about how an interface moves as much as how its data flows.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+<a class="icon-btn" href="mailto:yash.ladlapure@gmail.com" aria-label="Email Yash">
+<svg class="ic" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+</a>
+<sc-if value="{{ hasLinkedin }}" hint-placeholder-val="{{ false }}">
+<a class="icon-btn" href="{{ linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+<svg class="ic" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+</a>
+</sc-if>
+<sc-if value="{{ hasGithub }}" hint-placeholder-val="{{ false }}">
+<a class="icon-btn" href="{{ github }}" target="_blank" rel="noopener" aria-label="GitHub">
+<svg class="ic" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+</a>
+</sc-if>
+<a class="btn btn-glass" href="/_blob/e6ff1f64e11380bc099162fc5993b064" target="_blank" rel="noopener">Read my résumé
+<svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+</a>
+</div>
+</div>
+</div>
+
+<div class="glass reveal stats" style="border-radius: 28px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: hidden">
+<sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+<div style="padding: 28px 30px; display: flex; flex-direction: column; gap: 8px; border-right: 1px solid rgba(255,255,255,.08)">
+<span class="display" style="font-size: clamp(30px, 3.4vw, 44px); font-weight: 500; color: #FFE3B8">{{ s.value }}</span>
+<span style="font-size: 14px; color: #B9C2D3; line-height: 1.4">{{ s.label }}</span>
+</div>
+</sc-for>
+</div>
+</section>
+
+<!-- STACK -->
+<section id="stack" class="glass reveal" style="border-radius: 40px; padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="mono" style="margin: 0; font-size: 12px; color: #F4C27A; text-transform: uppercase">02 — Tools I ship with</p>
+<h2 class="display" style="margin: 0; font-size: clamp(34px, 4.4vw, 60px); line-height: 1; font-weight: 500">In my stack</h2>
+</div>
+<p style="margin: 0; max-width: 380px; font-size: 15px; line-height: 1.6; color: #B9C2D3">Pick a tool to see where I have actually used it.</p>
+</div>
+<div class="split" style="display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: 28px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<sc-for list="{{ groups }}" as="g" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span class="mono" style="font-size: 11px; color: #8F9AB0; text-transform: uppercase">{{ g.name }}</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{ g.tools }}" as="t" hint-placeholder-count="6">
+<button type="button" class="{{ t.cls }}" aria-pressed="{{ t.pressed }}" onClick="{{ t.pick }}">{{ t.key }}</button>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+<div class="glass-deep" aria-live="polite" style="border-radius: 26px; padding: 30px; display: flex; flex-direction: column; gap: 14px; min-height: 220px; box-sizing: border-box">
+<span class="mono" style="font-size: 11px; color: #8F9AB0; text-transform: uppercase">Where I used it</span>
+<span class="display" style="font-size: 30px; font-weight: 500; color: #FFE3B8">{{ tool.key }}</span>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #D5DBE6">{{ tool.does }}</p>
+</div>
+</div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" style="display: flex; flex-direction: column; gap: 40px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 14px">
+<p class="mono" style="margin: 0; font-size: 12px; color: #F4C27A; text-transform: uppercase">03 — Experience</p>
+<h2 class="display" style="margin: 0; font-size: clamp(34px, 4.4vw, 60px); line-height: 1.02; font-weight: 500; max-width: 760px">From first commit to the lakehouse.</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<sc-for list="{{ journey }}" as="j" hint-placeholder-count="4">
+<article class="glass reveal split" style="border-radius: 28px; padding: 30px 34px; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 24px">
+<div class="{{ j.tickCls }}" style="display: flex; flex-direction: column; gap: 6px">
+<span class="mono" style="font-size: 13px; color: #FFE3B8">{{ j.when }}</span>
+<span style="font-size: 14px; color: #8F9AB0">{{ j.where }}</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; font-size: 22px; font-weight: 700; line-height: 1.3">{{ j.title }}</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #C9D0DD; max-width: 720px">{{ j.body }}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{ j.tags }}" as="tg" hint-placeholder-count="3">
+<span class="chip" style="height: 28px; font-size: 12px">{{ tg }}</span>
+</sc-for>
+</div>
+</div>
+</article>
+</sc-for>
+</div>
+</section>
+
+<!-- WORK -->
+<section id="work" style="display: flex; flex-direction: column; gap: 36px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="mono" style="margin: 0; font-size: 12px; color: #F4C27A; text-transform: uppercase">04 — Selected work</p>
+<h2 class="display" style="margin: 0; font-size: clamp(34px, 4.4vw, 60px); line-height: 1; font-weight: 500">Works</h2>
+</div>
+<div role="group" aria-label="Filter projects" style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+<button type="button" class="{{ f.cls }}" aria-pressed="{{ f.pressed }}" onClick="{{ f.pick }}">{{ f.label }}</button>
+</sc-for>
+</div>
+</div>
+<div class="works" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start">
+<sc-for list="{{ works }}" as="w" hint-placeholder-count="4">
+<button type="button" class="{{ w.cls }}" aria-expanded="{{ w.isOpen }}" onClick="{{ w.toggle }}" onMouseMove="{{ spot }}">
+<div class="preview">
+<div class="mono" style="position: relative; font-size: 12px; line-height: 1.8; color: #C9D0DD; white-space: pre-line">{{ w.preview }}</div>
+</div>
+<div style="padding: 14px 26px 26px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<span class="mono" style="font-size: 11px; color: #8F9AB0; text-transform: uppercase">{{ w.tag }}</span>
+<span class="mono" style="font-size: 12px; color: #F4C27A">{{ w.hint }}</span>
+</div>
+<h3 style="margin: 0; font-size: 22px; font-weight: 700; color: #EEF1F7">{{ w.name }}</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C9D0DD">{{ w.short }}</p>
+<sc-if value="{{ w.isOpen }}" hint-placeholder-val="{{ false }}">
+<div class="fade" style="display: flex; flex-direction: column; gap: 14px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.1); margin-top: 6px">
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #D5DBE6">{{ w.summary }}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{ w.stack }}" as="st" hint-placeholder-count="4">
+<span class="chip" style="height: 28px; font-size: 12px">{{ st }}</span>
+</sc-for>
+</div>
+</div>
+</sc-if>
+</div>
+</button>
+</sc-for>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="glass reveal" style="border-radius: 44px; padding: clamp(36px, 6vw, 88px) clamp(24px, 5vw, 72px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 26px">
+<p class="mono" style="margin: 0; font-size: 12px; color: #F4C27A; text-transform: uppercase">05 — Contact</p>
+<h2 class="display" style="margin: 0; font-size: clamp(34px, 5.4vw, 76px); line-height: 1.02; font-weight: 500; max-width: 900px">Let’s build something that keeps moving.</h2>
+<p style="margin: 0; max-width: 560px; font-size: 17px; line-height: 1.6; color: #C9D0DD">Open to a six-month internship from January to June 2027 and full-time roles from July 2027. Internships, projects, or just hello: my inbox is open.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center">
+<a class="btn btn-solid" href="mailto:yash.ladlapure@gmail.com">
+<svg class="ic" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+yash.ladlapure@gmail.com
+</a>
+<button type="button" class="btn btn-glass" onClick="{{ copy }}">{{ copyLabel }}</button>
+<a class="btn btn-glass" href="/_blob/e6ff1f64e11380bc099162fc5993b064" target="_blank" rel="noopener">Résumé (PDF)</a>
+</div>
+<p class="mono" style="margin: 6px 0 0; font-size: 12px; color: #8F9AB0">PUNE · OPEN TO BANGALORE, HYDERABAD, MUMBAI AND REMOTE</p>
+</section>
+</div>
+
+<!-- FOOTER -->
+<footer class="glass-deep" style="border-left: 0; border-right: 0; border-bottom: 0">
+<div class="foot" style="max-width: 1180px; margin: 0 auto; padding: 64px 24px 28px; box-sizing: border-box; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-weight: 700; font-size: 16px">Reach</span>
+<a href="mailto:yash.ladlapure@gmail.com" style="font-size: 15px">Email</a>
+<sc-if value="{{ hasLinkedin }}" hint-placeholder-val="{{ false }}"><a href="{{ linkedin }}" target="_blank" rel="noopener" style="font-size: 15px">LinkedIn</a></sc-if>
+<a href="/_blob/e6ff1f64e11380bc099162fc5993b064" target="_blank" rel="noopener" style="font-size: 15px">Résumé</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-weight: 700; font-size: 16px">Build</span>
+<sc-if value="{{ hasGithub }}" hint-placeholder-val="{{ false }}"><a href="{{ github }}" target="_blank" rel="noopener" style="font-size: 15px">GitHub</a></sc-if>
+<a href="#work" style="font-size: 15px">Works</a>
+<a href="#stack" style="font-size: 15px">Stack</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-weight: 700; font-size: 16px">Based in</span>
+<span style="font-size: 15px; color: #C9D0DD">Pune, India</span>
+<span style="font-size: 15px; color: #C9D0DD">MIT World Peace University</span>
+</div>
+</div>
+<div style="max-width: 1180px; margin: 0 auto; padding: 22px 24px 36px; box-sizing: border-box; border-top: 1px solid rgba(255,255,255,.08); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #8F9AB0">
+<span>© 2026 Yash Ladlapure</span>
+<span class="mono" style="font-size: 12px">The ocean is a live WebGL shader</span>
+</div>
+</footer>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"github":{"editor":"text","default":"","section":"Links"},"linkedin":{"editor":"text","default":"","section":"Links"},"$preview":{"width":1440,"height":5600}}'>
+var TOOLS = [
+  { name: 'Languages', tools: [
+    ['Python', 'Pipelines from PostgreSQL into Parquet and Apache Iceberg at my internship, and the data generator behind the Supply Chain Command Center.'],
+    ['SQL', 'Normalized data models, 24 KPI queries and more than 20 data-quality checks.'],
+    ['TypeScript', 'InternSetu, end to end.'],
+    ['JavaScript', 'Every front-end and Node back-end I have shipped.'],
+    ['Java', 'Coursework and problem solving.'],
+    ['C++', 'Coursework and problem solving.']
+  ]},
+  { name: 'Web', tools: [
+    ['React', 'The Research Copilot and Meme Vault front-ends.'],
+    ['Next.js', 'InternSetu’s app and routing.'],
+    ['Node.js', 'REST APIs with JWT and session-based auth.'],
+    ['Express', 'Back-ends for Research Copilot and Meme Vault.'],
+    ['Django', 'Python web back-ends.'],
+    ['GSAP', 'Scroll choreography for my creative web work.'],
+    ['WebGL', 'The ocean behind this page, written as a fragment shader.']
+  ]},
+  { name: 'Data', tools: [
+    ['PostgreSQL', 'InternSetu’s API, the nine-table supply-chain schema and the lakehouse source at my internship.'],
+    ['Iceberg', 'The table format for my internship pipelines.'],
+    ['Trino', 'Querying Iceberg tables in the lakehouse.'],
+    ['pandas', 'Data wrangling and validation.'],
+    ['Power BI', 'Reporting supply-chain KPIs: OTIF, fill rate, supplier scores and stock-out risk.'],
+    ['MongoDB', 'Meme Vault’s data.']
+  ]},
+  { name: 'Infra & AI', tools: [
+    ['Docker', 'A Compose lakehouse with PostgreSQL, MinIO, Hive Metastore and Trino.'],
+    ['MinIO', 'Object storage for the local lakehouse.'],
+    ['GitHub Actions', 'CI for my projects.'],
+    ['Linux', 'Where most of it runs.'],
+    ['Gemini API', 'Section refinement with validated structured output in Research Copilot.'],
+    ['Blender', 'Procedural 3D scenes scripted in Python.']
+  ]}
+];
+
+var WORKS = [
+  { id: 'rc', cat: 'AI', hue: 'teal', name: 'Research Copilot', tag: 'AI · Full-stack',
+    short: 'A manuscript checker for Springer LNCS and IEEE that shows its work.',
+    preview: 'check   margins ........ pass\ncheck   figure captions  2 issues\n- Fig 1. results\n+ Figure 1. Results',
+    summary: 'Deterministic rule checks produce a severity-tagged compliance report first. Gemini then refines sections, and every change arrives as a side-by-side diff the author approves, with retries when the model’s output fails validation.',
+    stack: ['React', 'Vite', 'Node.js', 'Express', 'Gemini API'] },
+  { id: 'sc', cat: 'Data', hue: 'sky', name: 'Supply Chain Command Center', tag: 'Data · Analytics',
+    short: 'One data model and one set of KPIs for a year of operations.',
+    preview: 'tables   9\nkpis     24 queries\nchecks   12 data-quality\nreport   OTIF · fill rate · risk',
+    summary: 'Python generates a reproducible year of operations data, a nine-table PostgreSQL schema models it, and 24 KPI queries plus 12 data-quality checks feed a Power BI report on OTIF, fill rate, supplier scores and stock-out risk.',
+    stack: ['Python', 'PostgreSQL', 'SQL', 'Power BI'] },
+  { id: 'is', cat: 'Full-stack', hue: 'amber', name: 'InternSetu', tag: 'Full-stack platform',
+    short: 'Internship discovery and a status board for every application.',
+    preview: 'saved → applied → interview → offer\nsources  aggregated\nauth     session-based',
+    summary: 'Listings aggregated from several sources, student profiles, and a status board for every application, served by a PostgreSQL-backed REST API with session-based auth.',
+    stack: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker'] },
+  { id: 'mv', cat: 'Full-stack', hue: 'rose', name: 'Meme Vault', tag: 'MERN app',
+    short: 'Upload, browse, like and share memes on an endless feed.',
+    preview: 'POST /api/memes   201\nGET  /api/feed?cursor=…\nauth  JWT\ncdn   Cloudinary',
+    summary: 'JWT auth, REST APIs, Cloudinary-backed image delivery and an infinite-scroll feed, built on MongoDB, Express, React and Node.',
+    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Cloudinary'] },
+  { id: 'pf', cat: 'Creative', hue: 'violet', name: 'This portfolio', tag: 'Creative web',
+    short: 'A live ocean under glass, rendered on your GPU as you scroll.',
+    preview: 'float h = waves(p.xz, 12);\nvec3 n = normal(p.xz);\ncol = fresnel * sky(r) + deep;',
+    summary: 'The sea is a WebGL2 fragment shader: layered waves are raymarched every frame, lit by a low sun, and the camera tilts down into the water as you scroll. Glass panels float above it.',
+    stack: ['WebGL2', 'GLSL', 'JavaScript', 'CSS'] }
+];
+
+var JOURNEY = [
+  { when: 'Jan 2027 →', where: 'Next', now: true, title: 'Looking for my next team.',
+    body: 'Free for a six-month internship from January to June 2027, and for full-time roles after I graduate in July 2027.', tags: ['Software engineering', 'Data', 'AI'] },
+  { when: 'Jul 2026 – now', where: 'Pune', now: false, title: 'Software Engineer Intern · Augmented Transformations',
+    body: 'Building Python and SQL pipelines that move PostgreSQL data into Parquet and Apache Iceberg, queried through Trino on a Docker Compose lakehouse. Three pipelines, five normalized data models and more than 20 data-quality checks so far.', tags: ['Python', 'SQL', 'Iceberg', 'Trino', 'Docker'] },
+  { when: '2026', where: 'BrainCon · Springer', now: false, title: 'Co-author, AyurGPT',
+    body: 'An AI dietician agent that brings Ayurvedic principles together with modern nutritional science. Accepted at BrainCon, Springer Volume 2; publication in progress.', tags: ['Research', 'LLMs'] },
+  { when: 'Aug 2023 – 2027', where: 'MIT-WPU, Pune', now: false, title: 'B.Tech, Computer Science and Engineering',
+    body: 'MIT World Peace University, class of 2027. Where I started building: lab assignments by day, side projects by night.', tags: ['Class of 2027'] }
+];
+
+var VERT = '#version 300 es\nvoid main(){vec2 p=vec2((gl_VertexID<<1)&2,gl_VertexID&2);gl_Position=vec4(p*2.0-1.0,0.0,1.0);}';
+
+var FRAG = [
+'#version 300 es',
+'precision highp float;',
+'uniform vec2 uR; uniform float uT; uniform float uP; uniform float uY;',
+'out vec4 o;',
+'#define DEPTH 1.0',
+'const vec3 SUN = vec3(0.3876, 0.0461, 0.9206);',
+'vec2 wdx(vec2 p, vec2 d, float f, float t){ float x = dot(d, p) * f + t; float w = exp(sin(x) - 1.0); return vec2(w, -w * cos(x)); }',
+'float H(vec2 p, int n){',
+'  float it = 0.0, f = 1.0, tm = 1.0, wg = 1.0, sv = 0.0, sw = 0.0;',
+'  for (int i = 0; i < 32; i++) {',
+'    if (i >= n) break;',
+'    vec2 d = vec2(sin(it), cos(it));',
+'    vec2 r = wdx(p, d, f, uT * tm);',
+'    p += d * r.y * wg * 0.38;',
+'    sv += r.x * wg; sw += wg;',
+'    wg = mix(wg, 0.0, 0.2); f *= 1.18; tm *= 1.07; it += 1232.399963;',
+'  }',
+'  return sv / sw;',
+'}',
+'vec3 sky(vec3 d){',
+'  float y = clamp(d.y, 0.0, 1.0);',
+'  vec3 c = mix(vec3(0.98, 0.58, 0.38), vec3(0.20, 0.18, 0.36), smoothstep(0.0, 0.16, y));',
+'  c = mix(c, vec3(0.03, 0.045, 0.11), smoothstep(0.12, 0.75, y));',
+'  float s = max(dot(d, SUN), 0.0);',
+'  c += vec3(1.0, 0.55, 0.3) * pow(s, 5.0) * 0.32;',
+'  c += vec3(1.0, 0.72, 0.45) * pow(s, 80.0) * 0.7;',
+'  c += vec3(1.0, 0.9, 0.75) * smoothstep(0.9994, 0.9997, s) * 5.0;',
+'  return c;',
+'}',
+'vec3 nrm(vec2 p, float e){',
+'  vec2 ex = vec2(e, 0.0);',
+'  float h = H(p, 26) * DEPTH;',
+'  vec3 a = vec3(p.x, h, p.y);',
+'  return normalize(cross(a - vec3(p.x - e, H(p - ex, 26) * DEPTH, p.y), a - vec3(p.x, H(p + ex.yx, 26) * DEPTH, p.y + e)));',
+'}',
+'float march(vec3 s, vec3 e, vec3 ro){',
+'  vec3 p = s; vec3 dir = normalize(e - s);',
+'  for (int i = 0; i < 56; i++) {',
+'    float h = H(p.xz, 10) * DEPTH - DEPTH;',
+'    if (h + 0.01 > p.y) return distance(p, ro);',
+'    p += dir * (p.y - h);',
+'  }',
+'  return distance(s, ro);',
+'}',
+'void main(){',
+'  vec2 uv = (gl_FragCoord.xy - 0.5 * uR) / uR.y;',
+'  vec3 d = normalize(vec3(uv, 1.7));',
+'  float c = cos(uP), s = sin(uP);',
+'  d = vec3(d.x, d.y * c - d.z * s, d.y * s + d.z * c);',
+'  float cy = cos(uY), sy = sin(uY);',
+'  d = vec3(d.x * cy + d.z * sy, d.y, -d.x * sy + d.z * cy);',
+'  vec3 ro = vec3(0.0, 3.0, uT * 0.5);',
+'  vec3 col;',
+'  if (d.y >= 0.0) { col = sky(d); }',
+'  else {',
+'    vec3 a = ro + d * ((0.0 - ro.y) / d.y);',
+'    vec3 b = ro + d * ((-DEPTH - ro.y) / d.y);',
+'    float dist = march(a, b, ro);',
+'    vec3 p = ro + d * dist;',
+'    vec3 n = nrm(p.xz, 0.01);',
+'    n = mix(n, vec3(0.0, 1.0, 0.0), 0.8 * min(1.0, sqrt(dist * 0.01) * 1.1));',
+'    float fr = 0.04 + 0.96 * pow(1.0 - max(dot(-d, n), 0.0), 5.0);',
+'    vec3 r = reflect(d, n); r.y = abs(r.y);',
+'    vec3 scat = vec3(0.006, 0.018, 0.04) + vec3(0.02, 0.06, 0.075) * (p.y + DEPTH) * 0.8;',
+'    col = fr * sky(r) + (1.0 - fr) * scat;',
+'    col = mix(col, sky(normalize(vec3(d.x, 0.0, d.z))), 1.0 - exp(-dist * 0.003));',
+'  }',
+'  col = 1.0 - exp(-col * 1.3);',
+'  float g = fract(sin(dot(gl_FragCoord.xy, vec2(12.9898, 78.233)) + uT) * 43758.5453);',
+'  col += (g - 0.5) * (2.0 / 255.0);',
+'  o = vec4(col, 1.0);',
+'}'
+].join('\n');
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { filter: 'All', open: null, tool: 'Python', active: 'top', copied: false };
+    this.cvRef = (el) => { this.cv = el; };
+    this.shadeRef = (el) => { this.shade = el; };
+    this.sp = 0; this.ps = 0; this.my = 0; this.ym = 0; this.q = 0.7;
+    this.onScroll = this.onScroll.bind(this);
+    this.onMove = this.onMove.bind(this);
+    this.onResize = this.onResize.bind(this);
+    this.frame = this.frame.bind(this);
+  }
+
+  componentDidMount() {
+    this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('pointermove', this.onMove, { passive: true });
+    window.addEventListener('resize', this.onResize);
+    this.onScroll();
+    this.startOcean();
+  }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('pointermove', this.onMove);
+    window.removeEventListener('resize', this.onResize);
+  }
+
+  onScroll() {
+    var vh = window.innerHeight || 1;
+    this.sp = Math.min(1, window.scrollY / vh);
+    if (this.shade) this.shade.style.opacity = String(Math.min(1, window.scrollY / (vh * 1.4)) * 0.5);
+    var ids = ['top', 'profile', 'stack', 'journey', 'work', 'contact'];
+    var active = 'top';
+    for (var i = 0; i < ids.length; i++) {
+      var el = document.getElementById(ids[i]);
+      if (el && el.getBoundingClientRect().top < vh * 0.4) active = ids[i];
+    }
+    if (active !== this.state.active) this.setState({ active: active });
+    this.dirty = true;
+  }
+
+  onMove(e) { this.my = (e.clientX / (window.innerWidth || 1) - 0.5); }
+
+  onResize() { this.size(); this.dirty = true; }
+
+  startOcean() {
+    var cv = this.cv; if (!cv) return;
+    var gl = cv.getContext('webgl2', { antialias: false, alpha: false, powerPreference: 'high-performance' });
+    if (!gl) { cv.style.display = 'none'; return; }
+    var sh = function (type, src) { var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; };
+    var pr = gl.createProgram();
+    gl.attachShader(pr, sh(gl.VERTEX_SHADER, VERT));
+    gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, FRAG));
+    gl.linkProgram(pr);
+    if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) { cv.style.display = 'none'; return; }
+    gl.useProgram(pr);
+    gl.bindVertexArray(gl.createVertexArray());
+    this.gl = gl;
+    this.u = { R: gl.getUniformLocation(pr, 'uR'), T: gl.getUniformLocation(pr, 'uT'), P: gl.getUniformLocation(pr, 'uP'), Y: gl.getUniformLocation(pr, 'uY') };
+    this.size();
+    this.t0 = performance.now(); this.last = this.t0; this.acc = 0; this.n = 0; this.dirty = true;
+    this.raf = requestAnimationFrame(this.frame);
+  }
+
+  size() {
+    if (!this.gl) return;
+    var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    var w = window.innerWidth * dpr * this.q, h = window.innerHeight * dpr * this.q;
+    var k = Math.min(1, Math.sqrt(900000 / Math.max(1, w * h)));
+    this.cv.width = Math.max(1, Math.round(w * k));
+    this.cv.height = Math.max(1, Math.round(h * k));
+    this.gl.viewport(0, 0, this.cv.width, this.cv.height);
+  }
+
+  frame(now) {
+    this.raf = requestAnimationFrame(this.frame);
+    var dt = now - this.last; this.last = now;
+    this.ps += (this.sp - this.ps) * 0.07;
+    this.ym += (this.my * 0.12 - this.ym) * 0.04;
+    if (this.reduced && !this.dirty) return;
+    // Keep it smooth on slower GPUs: drop the render scale when frames run long.
+    this.acc += dt; this.n++;
+    if (this.n === 40) {
+      if (this.acc / this.n > 24 && this.q > 0.4) { this.q -= 0.1; this.size(); }
+      this.acc = 0; this.n = 0;
+    }
+    var gl = this.gl, u = this.u;
+    var t = this.reduced ? 12 : (now - this.t0) / 1000 + 12;
+    gl.uniform2f(u.R, this.cv.width, this.cv.height);
+    gl.uniform1f(u.T, t);
+    gl.uniform1f(u.P, 0.035 + this.ps * 0.5);
+    gl.uniform1f(u.Y, this.reduced ? 0 : this.ym);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    this.dirty = false;
+  }
+
+  renderVals() {
+    var self = this, st = this.state;
+    var github = (this.props.github ?? '').trim();
+    var linkedin = (this.props.linkedin ?? '').trim();
+    var navItems = [['profile', 'Profile'], ['stack', 'Stack'], ['journey', 'Experience'], ['work', 'Works'], ['contact', 'Contact']];
+    var all = [];
+    TOOLS.forEach(function (g) { g.tools.forEach(function (t) { all.push({ key: t[0], does: t[1] }); }); });
+    var tool = all.find(function (t) { return t.key === st.tool; }) || all[0];
+    var cats = ['All', 'AI', 'Data', 'Full-stack', 'Creative'];
+    return {
+      cvRef: this.cvRef,
+      shadeRef: this.shadeRef,
+      github: github, linkedin: linkedin,
+      hasGithub: github.length > 0, hasLinkedin: linkedin.length > 0,
+      nav: navItems.map(function (n) { return { href: '#' + n[0], label: n[1], cls: 'navlink' + (st.active === n[0] ? ' on' : '') }; }),
+      stats: [
+        { value: '5', label: 'projects built end to end' },
+        { value: '3', label: 'lakehouse pipelines at my internship' },
+        { value: '20+', label: 'data-quality checks written' },
+        { value: '1', label: 'Springer paper co-authored' }
+      ],
+      groups: TOOLS.map(function (g) {
+        return { name: g.name, tools: g.tools.map(function (t) {
+          var on = st.tool === t[0];
+          return { key: t[0], cls: 'tile' + (on ? ' on' : ''), pressed: on ? 'true' : 'false', pick: function () { self.setState({ tool: t[0] }); } };
+        }) };
+      }),
+      tool: tool,
+      journey: JOURNEY.map(function (j) { return Object.assign({}, j, { tickCls: 'tick' + (j.now ? ' now' : '') }); }),
+      filters: cats.map(function (c) {
+        var on = st.filter === c;
+        return { label: c, cls: 'pill' + (on ? ' on' : ''), pressed: on ? 'true' : 'false', pick: function () { self.setState({ filter: c, open: null }); } };
+      }),
+      works: WORKS.filter(function (w) { return st.filter === 'All' || w.cat === st.filter; }).map(function (w) {
+        var open = st.open === w.id;
+        return Object.assign({}, w, {
+          isOpen: open,
+          hint: open ? 'Close' : 'Details +',
+          cls: 'card glass hue-' + w.hue + (open ? ' open' : ''),
+          toggle: function () { self.setState({ open: open ? null : w.id }); }
+        });
+      }),
+      spot: function (e) {
+        var r = e.currentTarget.getBoundingClientRect();
+        e.currentTarget.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        e.currentTarget.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      },
+      copyLabel: st.copied ? 'Copied ✓' : 'Copy address',
+      copy: function () {
+        if (navigator.clipboard) navigator.clipboard.writeText('yash.ladlapure@gmail.com').then(function () {
+          self.setState({ copied: true });
+          setTimeout(function () { self.setState({ copied: false }); }, 1800);
+        }, function () {});
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

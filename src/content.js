@@ -10,7 +10,7 @@ export const site = {
   resume: 'Yash_Ladlapure_Resume.pdf', // lives in /public; swap the file to update it
   links: {
     github: 'https://github.com/YashLadlapure',
-    linkedin: '', // 'https://www.linkedin.com/in/your-handle'
+    linkedin: 'https://www.linkedin.com/in/yash-ladlapure',
   },
 
   stats: [
